@@ -16,12 +16,12 @@ public class HomePage extends BasePage {
 	public void clickMyAccount() {
 		click(btnMyAccount);
 	}
-	public RegisterPage clickRegister() {
+	public RegisterPage clickRegisterPage() {
 		click(btnRegister);
 		return new RegisterPage();
 	}
 	
-	public LoginPage clickLogin() {
+	public LoginPage clickLoginPage() {
 		click(btnLogin);
 		return new LoginPage();
 	}

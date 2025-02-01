@@ -15,7 +15,7 @@ public class RegisterTest extends BaseTest {
 	@Test
 	public void successfulRegister() throws InterruptedException {
 		homePage.clickMyAccount();
-		RegisterPage registerPage = homePage.clickRegister();
+		RegisterPage registerPage = homePage.clickRegisterPage();
 
 		String firstName = generateString();
 		String lastName = generateString();
