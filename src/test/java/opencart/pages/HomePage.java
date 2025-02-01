@@ -10,8 +10,9 @@ public class HomePage extends BasePage {
 	private By btnLogin = By.xpath("//a[normalize-space()='Login']");
 	private By fieldSearch=By.xpath("//input[@placeholder='Search']");
 	private By btnSearch=By.xpath("//button[@class='btn btn-light btn-lg']");
-	
-
+	private By btnDesktops=By.xpath("//a[normalize-space()='Desktops']");
+	private By btnMac=By.xpath("//a[normalize-space()='Mac (1)']");
+	private By btnWishList=By.xpath("//a[@id='wishlist-total']//i[@class='fa-solid fa-heart']");
 	
 	public void clickMyAccount() {
 		click(btnMyAccount);
@@ -33,5 +34,19 @@ public class HomePage extends BasePage {
 	public void clickSearch() {
 		click(btnSearch);
 	}
+	
+	public void clickDesktops() {
+		click(btnDesktops);
+	}
+	
+	public ProductListPage clickMac() {
+		click(btnMac);
+		
+		return new ProductListPage();
 
+	}
+	
+	public void clickWishList() {
+		click(btnWishList);
+	}
 }

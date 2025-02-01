@@ -1,10 +1,14 @@
 package opencart.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class BasePage {
+	
+	
 	
 	public static WebDriver driver;
 	
@@ -26,6 +30,11 @@ public class BasePage {
 	
 	public String  getInnerText(By locator) {
 		return find(locator).getText();
+	}
+	
+	public List<WebElement> getProductsList(int position){
+		
+		return driver.findElements(By.xpath("//div[@id='product-list']//div[@class='col mb-3']"));
 	}
 	
 	
