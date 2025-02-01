@@ -14,7 +14,8 @@ public class RegisterPage extends HomePage {
 	By btnNewsletter = By.xpath("//input[@id='input-newsletter']");
 	By btnAgree = By.xpath("//input[@name='agree']");
 	By btnContinue = By.xpath("//button[normalize-space()='Continue']");
-
+	By notificationCard=By.xpath("//div[@class='alert alert-danger alert-dismissible']");
+	
 	public void setFirstName(String firstName) {
 		set(fieldFirstName, firstName);
 	}
@@ -43,7 +44,16 @@ public class RegisterPage extends HomePage {
 	}
 	
 	public void clickContinue() {
-		click(btnContinue);
+		scrollToElement(btnContinue);
+		javascriptClick(btnContinue);
+	}
+	
+	public String getNotificationCard() {
+		try {
+			return getInnerText(notificationCard);
+		}catch (Exception e) {
+			return e.getMessage();
+		}
 	}
 
 }
