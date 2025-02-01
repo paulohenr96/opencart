@@ -11,11 +11,7 @@ public class HomePage extends BasePage {
 	private By fieldSearch=By.xpath("//input[@placeholder='Search']");
 	private By btnSearch=By.xpath("//button[@class='btn btn-light btn-lg']");
 	
-	public HomePage(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
-	
+
 	
 	public void clickMyAccount() {
 		click(btnMyAccount);
