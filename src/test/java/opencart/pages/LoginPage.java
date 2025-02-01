@@ -1,5 +1,5 @@
 package opencart.pages;
 
-public class LoginPage {
+public class LoginPage extends HomePage{
 
 }

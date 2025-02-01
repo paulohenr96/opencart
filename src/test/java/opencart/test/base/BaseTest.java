@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 
 import opencart.pages.BasePage;
 import opencart.pages.HomePage;
+import opencart.utility.Utility;
 
 public class BaseTest {
 
@@ -31,7 +32,7 @@ public class BaseTest {
 		
 		basePage=new BasePage();
 		basePage.setDriver(driver);
-		
+		Utility.setUtilityDriver();
 		homePage=new HomePage();
 	}
 	
