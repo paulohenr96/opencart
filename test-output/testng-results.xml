@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-01T08:07:09 BRT" name="Default suite" finished-at="2025-02-01T08:07:26 BRT" duration-ms="17022">
+  <suite started-at="2025-02-01T11:07:56 BRT" name="Default suite" finished-at="2025-02-01T11:08:14 BRT" duration-ms="17981">
     <groups>
     </groups>
-    <test started-at="2025-02-01T08:07:09 BRT" name="Default test" finished-at="2025-02-01T08:07:26 BRT" duration-ms="17022">
-      <class name="opencart.test.login.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginTest@7a8c8dcf]" started-at="2025-02-01T08:07:09 BRT" name="setUp" finished-at="2025-02-01T08:07:13 BRT" duration-ms="3884" status="PASS">
+    <test started-at="2025-02-01T11:07:56 BRT" name="Default test" finished-at="2025-02-01T11:08:14 BRT" duration-ms="17981">
+      <class name="opencart.test.login.LoginInvalidEmailTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@7a8c8dcf]" started-at="2025-02-01T11:07:56 BRT" name="setUp" finished-at="2025-02-01T11:08:02 BRT" duration-ms="5852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginTest@7a8c8dcf]" started-at="2025-02-01T08:07:13 BRT" name="loadApplication" finished-at="2025-02-01T08:07:18 BRT" duration-ms="4787" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@7a8c8dcf]" started-at="2025-02-01T11:08:02 BRT" name="loadApplication" finished-at="2025-02-01T11:08:08 BRT" duration-ms="6518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="successfulLogin()[pri:0, instance:opencart.test.login.LoginTest@7a8c8dcf]" started-at="2025-02-01T08:07:18 BRT" name="successfulLogin" finished-at="2025-02-01T08:07:25 BRT" duration-ms="7230" status="PASS">
+        <test-method signature="successfulLogin()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@7a8c8dcf]" started-at="2025-02-01T11:08:08 BRT" name="successfulLogin" finished-at="2025-02-01T11:08:12 BRT" duration-ms="3449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginTest@7a8c8dcf]" started-at="2025-02-01T08:07:25 BRT" name="tearDown" finished-at="2025-02-01T08:07:26 BRT" duration-ms="1003" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@7a8c8dcf]" started-at="2025-02-01T11:08:12 BRT" name="tearDown" finished-at="2025-02-01T11:08:14 BRT" duration-ms="2029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- opencart.test.login.LoginTest -->
+      </class> <!-- opencart.test.login.LoginInvalidEmailTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

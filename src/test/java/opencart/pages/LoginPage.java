@@ -8,6 +8,7 @@ public class LoginPage extends HomePage {
     By fieldEmailAddress = By.xpath("//input[@id='input-email']");
     By fieldPassword = By.xpath("//input[@id='input-password']");
     By btnLogin = By.xpath("//button[normalize-space()='Login']");
+    By notification=By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
     public void setEmailAddress(String email) {
         set(fieldEmailAddress, email);
@@ -19,5 +20,15 @@ public class LoginPage extends HomePage {
 
     public void clickLogin() {
         click(btnLogin);
+    }
+    
+    public String getNotification() {
+    	try {
+    		return getInnerText(notification);
+    	}catch(Exception e){
+    		return e.getMessage();
+    	}
+    	
+    	 
     }
 }

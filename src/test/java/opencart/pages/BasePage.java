@@ -28,4 +28,5 @@ public class BasePage {
 		return find(locator).getText();
 	}
 	
+	
 }
