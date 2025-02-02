@@ -1,6 +1,8 @@
 # Automated Testing OpenCart(v4.1.0.0) E-Commerce
+<p align="center">
+  <img src="image.png" alt="alt text">
+</p>
 
-![alt text](image.png)
 
 ## Objective
 - Automated tests for the OpenCart E-Commerce
@@ -13,6 +15,7 @@
 
 - Download install Java 21
 - Download and install Maven 3.9.9
+- Configure the appURL variable in the config.properties file (src/test/resources) with the opencart URL
 - Go to the root folder and run the command on cmd
 
 ```
