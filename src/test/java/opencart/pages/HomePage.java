@@ -13,6 +13,14 @@ public class HomePage extends BasePage {
 	private By btnDesktops=By.xpath("//a[normalize-space()='Desktops']");
 	private By btnMac=By.xpath("//a[normalize-space()='Mac (1)']");
 	private By btnWishList=By.xpath("//a[@id='wishlist-total']//i[@class='fa-solid fa-heart']");
+	private By btnShoppingCart=By.xpath("//span[normalize-space()='Shopping Cart']");
+	
+	public CartPage clickShoppingCart() {
+		
+		click(btnShoppingCart);
+		
+		return new CartPage();
+	}
 	
 	public void clickMyAccount() {
 		click(btnMyAccount);

@@ -30,8 +30,9 @@ public class RegisterTest extends BaseTest {
 		registerPage.clickAgree();
 		registerPage.clickContinue();
 		
-		Thread.sleep(4000);
-		Assert.assertTrue(getURL().contains("route=account/success"),"Invalid URL");
+		Thread.sleep(3000);
+		String actualURL=getURL();
+		Assert.assertTrue(actualURL.contains("route=account/success"),"Invalid URL ("+actualURL+")");
 
 	}
 }
