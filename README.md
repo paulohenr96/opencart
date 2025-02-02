@@ -19,5 +19,17 @@
 mvn test
 ````
 
-## 
+## Test Cases
+
+| Test Case ID | Test Case Description                                               | Steps                                                                                       |
+|--------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| TC01         | User adds a product to the cart                                    | 1. Create user<br>2. Add a product to the cart                                             |
+| TC02         | User adds a product to the wishlist                                | 1. Create user<br>2. Add a product to the wishlist                                         |
+| TC03         | User registers an account                                          | 1. Create user                                                                             |
+| TC04         | User tries to register without agreeing to the privacy policy     | 1. Create a user without clicking the privacy policy button                                |
+| TC05         | Login with empty fields                                            | 1. Attempt to login without filling in any fields                                          |
+| TC06         | Login with invalid email                                           | 1. Attempt to login with an invalid email                                                  |
+| TC07         | Successful login                                                   | 1. Register user<br>2. Logout<br>3. Login with the newly created user                      |
+| TC08         | Checkout process                                                   | 1. Add products to the cart<br>2. Proceed through the checkout process                     |
+
 
