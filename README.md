@@ -18,9 +18,7 @@
 ```
 mvn test
 ````
-
 ## Test Cases
-
 | Test Case ID | Test Case Description                                               | Steps                                                                                       |
 |--------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | TC01         | User adds a product to the cart                                    | 1. Create user<br>2. Add a product to the cart                                             |
@@ -30,6 +28,4 @@ mvn test
 | TC05         | Login with empty fields                                            | 1. Attempt to login without filling in any fields                                          |
 | TC06         | Login with invalid email                                           | 1. Attempt to login with an invalid email                                                  |
 | TC07         | Successful login                                                   | 1. Register user<br>2. Logout<br>3. Login with the newly created user                      |
-| TC08         | Checkout process                                                   | 1. Add products to the cart<br>2. Proceed through the checkout process                     |
-
-
+| TC08         | Checkout process                                                   | 1. Create user<br>2. Add product to the cart<br>3. Go to the checkout page<br>4. Register the address for the new user<br>5. Select the address<br>6. Select the payment method<br>7. Confirm order |
