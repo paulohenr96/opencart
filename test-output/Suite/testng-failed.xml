@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="opencart.report.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Checkout(failed)">
     <classes>
-      <class name="opencart.test.login.LoginTest">
+      <class name="opencart.test.checkout.CheckoutTest">
         <methods>
           <include name="loadApplication"/>
           <include name="setUp"/>
-          <include name="takeFailedResultScreenshot"/>
           <include name="tearDown"/>
-          <include name="successfulLogin"/>
+          <include name="takeFailedResultScreenshot"/>
+          <include name="addToCart"/>
         </methods>
-      </class> <!-- opencart.test.login.LoginTest -->
+      </class> <!-- opencart.test.checkout.CheckoutTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Checkout(failed) -->
 </suite> <!-- Failed suite [Suite] -->

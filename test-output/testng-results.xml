@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-02T00:06:32 BRT" name="Suite" finished-at="2025-02-02T00:08:16 BRT" duration-ms="104416">
+  <suite started-at="2025-02-02T17:53:28 BRT" name="Suite" finished-at="2025-02-02T17:55:20 BRT" duration-ms="112201">
     <groups>
     </groups>
-    <test started-at="2025-02-02T00:06:32 BRT" name="LoginTest" finished-at="2025-02-02T00:07:16 BRT" duration-ms="44322">
+    <test started-at="2025-02-02T17:53:28 BRT" name="LoginTest" finished-at="2025-02-02T17:54:18 BRT" duration-ms="50569">
       <class name="opencart.test.login.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T00:06:32 BRT" name="setUp" finished-at="2025-02-02T00:06:37 BRT" duration-ms="4789" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T17:53:28 BRT" name="setUp" finished-at="2025-02-02T17:53:33 BRT" duration-ms="4390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T00:06:37 BRT" name="loadApplication" finished-at="2025-02-02T00:06:42 BRT" duration-ms="5115" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T17:53:33 BRT" name="loadApplication" finished-at="2025-02-02T17:53:38 BRT" duration-ms="4916" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="successfulLogin()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T00:06:42 BRT" name="successfulLogin" finished-at="2025-02-02T00:06:49 BRT" duration-ms="7094" status="PASS">
+        <test-method signature="successfulLogin()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T17:53:38 BRT" name="successfulLogin" finished-at="2025-02-02T17:53:52 BRT" duration-ms="14250" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulLogin -->
-        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T00:06:49 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T00:06:49 BRT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T17:53:52 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T17:53:52 BRT" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,25 +30,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeFailedResultScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T00:06:49 BRT" name="tearDown" finished-at="2025-02-02T00:06:50 BRT" duration-ms="948" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginTest@4c178a76]" started-at="2025-02-02T17:53:52 BRT" name="tearDown" finished-at="2025-02-02T17:53:53 BRT" duration-ms="751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- opencart.test.login.LoginTest -->
       <class name="opencart.test.login.LoginEmptyFieldsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T00:06:50 BRT" name="setUp" finished-at="2025-02-02T00:06:53 BRT" duration-ms="2857" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T17:53:53 BRT" name="setUp" finished-at="2025-02-02T17:53:56 BRT" duration-ms="2936" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T00:06:53 BRT" name="loadApplication" finished-at="2025-02-02T00:07:00 BRT" duration-ms="6459" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T17:53:56 BRT" name="loadApplication" finished-at="2025-02-02T17:54:01 BRT" duration-ms="4744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="emptyFieldsLogin()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T00:07:00 BRT" name="emptyFieldsLogin" finished-at="2025-02-02T00:07:02 BRT" duration-ms="2298" status="PASS">
+        <test-method signature="emptyFieldsLogin()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T17:54:01 BRT" name="emptyFieldsLogin" finished-at="2025-02-02T17:54:04 BRT" duration-ms="3178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyFieldsLogin -->
-        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T00:07:02 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T00:07:02 BRT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T17:54:04 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T17:54:04 BRT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,25 +59,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeFailedResultScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T00:07:02 BRT" name="tearDown" finished-at="2025-02-02T00:07:03 BRT" duration-ms="655" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginEmptyFieldsTest@7770f470]" started-at="2025-02-02T17:54:04 BRT" name="tearDown" finished-at="2025-02-02T17:54:05 BRT" duration-ms="983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- opencart.test.login.LoginEmptyFieldsTest -->
       <class name="opencart.test.login.LoginInvalidEmailTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T00:07:03 BRT" name="setUp" finished-at="2025-02-02T00:07:06 BRT" duration-ms="3101" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T17:54:05 BRT" name="setUp" finished-at="2025-02-02T17:54:08 BRT" duration-ms="3283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T00:07:06 BRT" name="loadApplication" finished-at="2025-02-02T00:07:12 BRT" duration-ms="6291" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T17:54:08 BRT" name="loadApplication" finished-at="2025-02-02T17:54:15 BRT" duration-ms="6130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="invalidEmailTest()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T00:07:12 BRT" name="invalidEmailTest" finished-at="2025-02-02T00:07:15 BRT" duration-ms="2687" status="PASS">
+        <test-method signature="invalidEmailTest()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T17:54:15 BRT" name="invalidEmailTest" finished-at="2025-02-02T17:54:17 BRT" duration-ms="2176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidEmailTest -->
-        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T00:07:15 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T00:07:15 BRT" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T17:54:17 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T17:54:17 BRT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -88,27 +88,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeFailedResultScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T00:07:15 BRT" name="tearDown" finished-at="2025-02-02T00:07:16 BRT" duration-ms="1198" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.LoginInvalidEmailTest@5e5d171f]" started-at="2025-02-02T17:54:17 BRT" name="tearDown" finished-at="2025-02-02T17:54:18 BRT" duration-ms="1172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- opencart.test.login.LoginInvalidEmailTest -->
     </test> <!-- LoginTest -->
-    <test started-at="2025-02-02T00:07:17 BRT" name="Checkout" finished-at="2025-02-02T00:07:46 BRT" duration-ms="28225">
+    <test started-at="2025-02-02T17:54:20 BRT" name="Checkout" finished-at="2025-02-02T17:54:52 BRT" duration-ms="32125">
       <class name="opencart.test.checkout.CheckoutTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T00:07:17 BRT" name="setUp" finished-at="2025-02-02T00:07:21 BRT" duration-ms="3305" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T17:54:20 BRT" name="setUp" finished-at="2025-02-02T17:54:23 BRT" duration-ms="3165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T00:07:21 BRT" name="loadApplication" finished-at="2025-02-02T00:07:26 BRT" duration-ms="5088" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T17:54:23 BRT" name="loadApplication" finished-at="2025-02-02T17:54:29 BRT" duration-ms="5983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="addToCart()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T00:07:26 BRT" name="addToCart" finished-at="2025-02-02T00:07:45 BRT" duration-ms="19164" status="PASS">
+        <test-method signature="addToCart()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T17:54:29 BRT" name="addToCart" finished-at="2025-02-02T17:54:50 BRT" duration-ms="21255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T00:07:45 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T00:07:45 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T17:54:51 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T17:54:51 BRT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,27 +119,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeFailedResultScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T00:07:45 BRT" name="tearDown" finished-at="2025-02-02T00:07:46 BRT" duration-ms="650" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.checkout.CheckoutTest@37883b97]" started-at="2025-02-02T17:54:51 BRT" name="tearDown" finished-at="2025-02-02T17:54:52 BRT" duration-ms="1515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- opencart.test.checkout.CheckoutTest -->
     </test> <!-- Checkout -->
-    <test started-at="2025-02-02T00:07:46 BRT" name="Register" finished-at="2025-02-02T00:08:16 BRT" duration-ms="30249">
+    <test started-at="2025-02-02T17:54:52 BRT" name="Register" finished-at="2025-02-02T17:55:20 BRT" duration-ms="27420">
       <class name="opencart.test.register.RegisterDisagreePrivacyPolicyTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T00:08:02 BRT" name="setUp" finished-at="2025-02-02T00:08:05 BRT" duration-ms="2654" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T17:55:08 BRT" name="setUp" finished-at="2025-02-02T17:55:10 BRT" duration-ms="2583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T00:08:05 BRT" name="loadApplication" finished-at="2025-02-02T00:08:11 BRT" duration-ms="6749" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T17:55:10 BRT" name="loadApplication" finished-at="2025-02-02T17:55:16 BRT" duration-ms="5549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="disagreePrivacyPolicyRegister()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T00:08:11 BRT" name="disagreePrivacyPolicyRegister" finished-at="2025-02-02T00:08:15 BRT" duration-ms="3832" status="PASS">
+        <test-method signature="disagreePrivacyPolicyRegister()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T17:55:16 BRT" name="disagreePrivacyPolicyRegister" finished-at="2025-02-02T17:55:19 BRT" duration-ms="2712" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- disagreePrivacyPolicyRegister -->
-        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T00:08:15 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T00:08:15 BRT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T17:55:19 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T17:55:19 BRT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -150,25 +150,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeFailedResultScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T00:08:15 BRT" name="tearDown" finished-at="2025-02-02T00:08:16 BRT" duration-ms="685" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.register.RegisterDisagreePrivacyPolicyTest@6f45df59]" started-at="2025-02-02T17:55:19 BRT" name="tearDown" finished-at="2025-02-02T17:55:20 BRT" duration-ms="1015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- opencart.test.register.RegisterDisagreePrivacyPolicyTest -->
       <class name="opencart.test.register.RegisterTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T00:07:46 BRT" name="setUp" finished-at="2025-02-02T00:07:48 BRT" duration-ms="2604" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T17:54:52 BRT" name="setUp" finished-at="2025-02-02T17:54:56 BRT" duration-ms="4125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T00:07:48 BRT" name="loadApplication" finished-at="2025-02-02T00:07:55 BRT" duration-ms="6756" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T17:54:56 BRT" name="loadApplication" finished-at="2025-02-02T17:55:01 BRT" duration-ms="4287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="successfulRegister()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T00:07:55 BRT" name="successfulRegister" finished-at="2025-02-02T00:08:01 BRT" duration-ms="5937" status="PASS">
+        <test-method signature="successfulRegister()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T17:55:01 BRT" name="successfulRegister" finished-at="2025-02-02T17:55:07 BRT" duration-ms="5936" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulRegister -->
-        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T00:08:01 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T00:08:01 BRT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T17:55:07 BRT" name="takeFailedResultScreenshot" finished-at="2025-02-02T17:55:07 BRT" duration-ms="13" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -179,7 +179,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeFailedResultScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T00:08:01 BRT" name="tearDown" finished-at="2025-02-02T00:08:02 BRT" duration-ms="1012" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.register.RegisterTest@58ea606c]" started-at="2025-02-02T17:55:07 BRT" name="tearDown" finished-at="2025-02-02T17:55:08 BRT" duration-ms="872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
