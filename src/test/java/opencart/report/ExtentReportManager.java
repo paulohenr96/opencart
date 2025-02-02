@@ -38,8 +38,7 @@ public class ExtentReportManager implements ITestListener {
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("Nome=> " + result.getName());
-		test = extent.createTest(result.getName()+"_"+LocalDateTime.now());
+		test = extent.createTest(result.getName());
 		test.log(Status.PASS, "Test case PASSED is:" + result.getName());
 
 	}
