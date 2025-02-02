@@ -40,13 +40,6 @@ public class CartTest extends BaseTest {
 		
 		
 		
-//		homePage.clickMyAccount();
-//		LoginPage loginPage = homePage.clickLoginPage();
-//
-//		loginPage.setEmailAddress(email);
-//		loginPage.setPassword(password);
-//		loginPage.clickLogin();
-//		Thread.sleep(5000);
 
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.clickMac();
