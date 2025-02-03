@@ -64,12 +64,12 @@ public class CheckoutPage extends BasePage {
 
 	public void selectCountry(String country) {
 		Select countryDropdown = new Select(driver.findElement(selectCountry));
-		countryDropdown.selectByVisibleText(country); // or use selectByValue(countryValue)
+		countryDropdown.selectByVisibleText(country);
 	}
 
 	public void selectState(String state) {
 		Select stateDropdown = new Select(driver.findElement(selectState));
-		stateDropdown.selectByVisibleText(state); // or use selectByValue(stateValue)
+		stateDropdown.selectByVisibleText(state);
 		
 	}
 
@@ -93,5 +93,4 @@ public class CheckoutPage extends BasePage {
 		selectFieldByIndex(selectAddress, index);
 	}
 	
-// http://localhost/opencart/upload/index.php?route=checkout/success&language=en-gb
 }

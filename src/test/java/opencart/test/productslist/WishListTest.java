@@ -3,6 +3,7 @@ package opencart.test.productslist;
 import static opencart.utility.GetUtility.getURL;
 import static opencart.utility.RandomUtility.generateAlphanumeric;
 import static opencart.utility.RandomUtility.generateString;
+import static opencart.utility.WaitUtility.isURLLoaded;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -33,14 +34,10 @@ public class WishListTest extends BaseTest {
 		registerPage.clickAgree();
 		registerPage.clickContinue();
 		
-		Thread.sleep(3000);
-		String actualURL=getURL();
-		Assert.assertTrue(actualURL.contains("route=account/success"),"Invalid URL ("+actualURL+")");
-
+		String expectedFractionURL="route=account/success";
+		Boolean urlLoaded = isURLLoaded(expectedFractionURL);
+		Assert.assertTrue(urlLoaded,"Invalid URL ("+getURL()+")");
 		
-		
-		
-
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.goToMacPage();
 

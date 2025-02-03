@@ -3,6 +3,7 @@ package opencart.test.register;
 import static opencart.utility.GetUtility.getURL;
 import static opencart.utility.RandomUtility.generateAlphanumeric;
 import static opencart.utility.RandomUtility.generateString;
+import static opencart.utility.WaitUtility.isURLLoaded;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -30,9 +31,11 @@ public class RegisterTest extends BaseTest {
 		registerPage.clickAgree();
 		registerPage.clickContinue();
 		
-		Thread.sleep(3000);
-		String actualURL=getURL();
-		Assert.assertTrue(actualURL.contains("route=account/success"),"Invalid URL ("+actualURL+")");
+		String expectedFractionUrl="route=account/success";
+		
+		Boolean url = isURLLoaded(expectedFractionUrl);
+		
+		Assert.assertTrue(url,"Invalid URL ("+getURL()+")");
 
 	}
 }
