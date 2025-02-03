@@ -18,6 +18,10 @@ public class ProductListPage extends HomePage {
 		javascriptClick(By.xpath("//div[@id='product-list']//div[@class='col mb-3'][" + index + "]//button[1]"));
 	}
 	
+	public boolean successNotification() {
+		return isVisible(notificationCard);
+	}
+	
 	public String getNotificationSuccess() {
 		try {
 			

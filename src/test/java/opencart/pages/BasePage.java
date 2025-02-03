@@ -25,6 +25,9 @@ public class BasePage {
 	private WebElement find(By locator) {
 		return driver.findElement(locator);
 	}
+	public boolean isVisible(By locator) {
+		return driver.findElement(locator).isDisplayed();
+	}
 	
 	public void click(By locator) {
 		find(locator).click();

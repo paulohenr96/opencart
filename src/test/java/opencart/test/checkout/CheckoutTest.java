@@ -29,7 +29,7 @@ public class CheckoutTest extends BaseTest {
 		String lastName = generateString();
 		String email = generateString() + "@example.com"; 
 		String password = generateAlphanumeric();
-
+		
 		registerPage.setFirstName(firstName);
 		registerPage.setLastName(lastName);
 		registerPage.setEmail(email);
@@ -46,9 +46,9 @@ public class CheckoutTest extends BaseTest {
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.goToMacPage();
 
+		int indexProduct=1;
 	
-		// Add the first element to the card
-		productListPage.addProductToTheCart(1);
+		productListPage.addProductToTheCart(indexProduct);
 		String expectedMessage="Success: You have added iMac to your shopping cart!";
 		String actualMessage=productListPage.getNotificationSuccess();
 		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");

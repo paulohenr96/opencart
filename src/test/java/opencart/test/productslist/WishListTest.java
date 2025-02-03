@@ -44,10 +44,13 @@ public class WishListTest extends BaseTest {
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.goToMacPage();
 
-		productListPage.addProductToTheWishList(1);
+		int indexProduct=1;
+		productListPage.addProductToTheWishList(indexProduct);
 		String expectedMessage="Success: You have added iMac to your wish list!";
 		String actualMessage=productListPage.getNotificationSuccess();
+		boolean successNotification = productListPage.successNotification();
 		
+		Assert.assertTrue(successNotification,"The notification isnt visible.");
 		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");
 	
 		

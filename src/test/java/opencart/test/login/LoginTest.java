@@ -50,7 +50,8 @@ public class LoginTest extends BaseTest {
 		loginPage.setPassword(password);
 		loginPage.clickLogin();
 		Thread.sleep(5000);
-		Assert.assertTrue(getURL().contains("route=account/account"));
+		String url = getURL();
+		Assert.assertTrue(url.contains("route=account/account"),"Invalid URL ("+url+")");
 		
 	}
 }
