@@ -56,26 +56,6 @@ public class BaseTest {
 		homePage=new HomePage();
 	}
 	
-	@AfterMethod
-	public void takeFailedResultScreenshot(ITestResult result) {
-//		if (ITestResult.FAILURE==result.getStatus()) {
-//			TakesScreenshot screenshot=(TakesScreenshot) driver;
-//			File source=screenshot.getScreenshotAs(OutputType.FILE);
-//			File destination = new File(System.getProperty("user.dir")+
-//							"/resources/screenshots/("+
-//							LocalDate.now()+result.getName()+".png");	
-//			
-//			try {
-//				FileHandler.copy(source, destination);
-//			}catch(IOException e) {
-//				throw new RuntimeException(e);
-//			}
-//			System.out.println("Screen shot located at "+destination);
-//		}
-	}
-	
-	
-	
 	@AfterClass
 	public void tearDown() {
 		driver.quit(); 

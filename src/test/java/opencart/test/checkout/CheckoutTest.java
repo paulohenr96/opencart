@@ -49,7 +49,7 @@ public class CheckoutTest extends BaseTest {
 
 		int indexProduct=1;
 	
-		productListPage.addProductToTheCart(indexProduct);
+		productListPage.addProductToCartByIndex(indexProduct);
 		String expectedMessage="Success: You have added iMac to your shopping cart!";
 		String actualMessage=productListPage.getNotificationSuccess();
 		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");

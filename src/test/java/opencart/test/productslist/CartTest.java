@@ -33,9 +33,7 @@ public class CartTest extends BaseTest {
 		registerPage.clickAgree();
 		registerPage.clickContinue();
 		
-	
-		
-		
+			
 		String expectedFractionURL="route=account/success";
 		Boolean urlLoaded = isURLLoaded(expectedFractionURL);
 		Assert.assertTrue(urlLoaded,"Invalid URL ("+getURL()+")");
@@ -44,7 +42,9 @@ public class CartTest extends BaseTest {
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.goToMacPage();
 
-		productListPage.addProductToTheCart(1);
+		int indexOfProduct=1;
+		
+		productListPage.addProductToCartByIndex(indexOfProduct);
 		String expectedMessage="Success: You have added iMac to your shopping cart!";
 		String actualMessage=productListPage.getNotificationSuccess();
 		

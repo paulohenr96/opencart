@@ -79,7 +79,8 @@ public class ExtentReportManager implements ITestListener {
 		File source=screenshot.getScreenshotAs(OutputType.FILE);
 		File destination = new File(System.getProperty("user.dir")+
 						"/resources/screenshots/"+
-						LocalDate.now()+result.getName()+".png");	
+						new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date())						
+						+result.getName()+".png");	
 		
 		try {
 			FileHandler.copy(source, destination);
