@@ -17,7 +17,7 @@ public class LoginInvalidEmailTest extends BaseTest {
 		
 	
 		homePage.clickMyAccount();
-		LoginPage loginPage = homePage.clickLoginPage();
+		LoginPage loginPage = homePage.goToLoginPage();
 		
 		loginPage.setEmailAddress("paulo123gmail.com");
 		loginPage.setPassword("paulo123");

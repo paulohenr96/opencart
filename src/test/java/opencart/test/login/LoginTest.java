@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest {
 	public void successfulLogin() throws InterruptedException {
 		
 		homePage.clickMyAccount();
-		RegisterPage registerPage = homePage.clickRegisterPage();
+		RegisterPage registerPage = homePage.goToRegisterPage();
 
 		String firstName = generateString();
 		String lastName = generateString();
@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
 		
 		
 		homePage.clickMyAccount();
-		LoginPage loginPage = homePage.clickLoginPage();
+		LoginPage loginPage = homePage.goToLoginPage();
 		
 		loginPage.setEmailAddress(email);
 		loginPage.setPassword(password);

@@ -18,7 +18,7 @@ public class WishListTest extends BaseTest {
 	public void addToWishList() throws InterruptedException {
 		
 		homePage.clickMyAccount();
-		RegisterPage registerPage = homePage.clickRegisterPage();
+		RegisterPage registerPage = homePage.goToRegisterPage();
 
 		String firstName = generateString();
 		String lastName = generateString();
@@ -42,7 +42,7 @@ public class WishListTest extends BaseTest {
 		
 
 		homePage.clickDesktops();
-		ProductListPage productListPage = homePage.clickMac();
+		ProductListPage productListPage = homePage.goToMacPage();
 
 		productListPage.addProductToTheWishList(1);
 		String expectedMessage="Success: You have added iMac to your wish list!";

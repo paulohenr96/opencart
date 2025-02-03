@@ -9,7 +9,7 @@ public class CartPage extends HomePage{
 	private By btnCheckout=By.xpath("//a[@class='btn btn-primary']");
 	
 	
-	public CheckoutPage clickCheckout() {
+	public CheckoutPage goToCheckoutPage() {
 		javascriptClick(btnCheckout);
 		
 		return new CheckoutPage();

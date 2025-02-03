@@ -21,7 +21,7 @@ public class HomePage extends BasePage {
 		click(btnLogout);
 	}
 	
-	public CartPage clickShoppingCart() {
+	public CartPage goToShoppingCartPage() {
 		
 		click(btnShoppingCart);
 		
@@ -31,12 +31,12 @@ public class HomePage extends BasePage {
 	public void clickMyAccount() {
 		click(btnMyAccount);
 	}
-	public RegisterPage clickRegisterPage() {
+	public RegisterPage goToRegisterPage() {
 		click(btnRegister);
 		return new RegisterPage();
 	}
 	
-	public LoginPage clickLoginPage() {
+	public LoginPage goToLoginPage() {
 		click(btnLogin);
 		return new LoginPage();
 	}
@@ -53,7 +53,7 @@ public class HomePage extends BasePage {
 		click(btnDesktops);
 	}
 	
-	public ProductListPage clickMac() {
+	public ProductListPage goToMacPage() {
 		click(btnMac);
 		
 		return new ProductListPage();

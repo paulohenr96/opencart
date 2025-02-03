@@ -23,7 +23,7 @@ public class CheckoutTest extends BaseTest {
 		homePage.clickMyAccount();
 		
 		
-		RegisterPage registerPage = homePage.clickRegisterPage();
+		RegisterPage registerPage = homePage.goToRegisterPage();
 
 		String firstName = generateString();
 		String lastName = generateString();
@@ -44,7 +44,7 @@ public class CheckoutTest extends BaseTest {
 
 
 		homePage.clickDesktops();
-		ProductListPage productListPage = homePage.clickMac();
+		ProductListPage productListPage = homePage.goToMacPage();
 
 	
 		// Add the first element to the card
@@ -53,7 +53,7 @@ public class CheckoutTest extends BaseTest {
 		String actualMessage=productListPage.getNotificationSuccess();
 		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");
 	
-		CheckoutPage checkoutPage = homePage.clickShoppingCart().clickCheckout();
+		CheckoutPage checkoutPage = homePage.goToShoppingCartPage().goToCheckoutPage();
 		
         String company = generateString() + " Corp";
         String address1 = generateString() + " Street";

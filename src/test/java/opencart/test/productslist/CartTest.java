@@ -17,7 +17,7 @@ public class CartTest extends BaseTest {
 	@Test
 	public void addToCart() throws InterruptedException {
 		homePage.clickMyAccount();
-		RegisterPage registerPage = homePage.clickRegisterPage();
+		RegisterPage registerPage = homePage.goToRegisterPage();
 
 		String firstName = generateString();
 		String lastName = generateString();
@@ -42,7 +42,7 @@ public class CartTest extends BaseTest {
 		
 
 		homePage.clickDesktops();
-		ProductListPage productListPage = homePage.clickMac();
+		ProductListPage productListPage = homePage.goToMacPage();
 
 		productListPage.addProductToTheCart(1);
 		String expectedMessage="Success: You have added iMac to your shopping cart!";

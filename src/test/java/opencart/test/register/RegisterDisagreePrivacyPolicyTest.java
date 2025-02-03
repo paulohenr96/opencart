@@ -15,7 +15,7 @@ public class RegisterDisagreePrivacyPolicyTest extends BaseTest {
 	@Test
 	public void disagreePrivacyPolicyRegister() throws InterruptedException {
 		homePage.clickMyAccount();
-		RegisterPage registerPage = homePage.clickRegisterPage();
+		RegisterPage registerPage = homePage.goToRegisterPage();
 
 		String firstName = generateString();
 		String lastName = generateString();
