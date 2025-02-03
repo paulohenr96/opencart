@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
 
 		homePage.clickMyAccount();
 		homePage.clickLogout();
-		Thread.sleep(1000);
+		isURLLoaded("route=account/logout");
 		
 		
 		homePage.clickMyAccount();

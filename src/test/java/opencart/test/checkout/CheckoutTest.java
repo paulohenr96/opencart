@@ -87,9 +87,9 @@ public class CheckoutTest extends BaseTest {
 		paymentMethodAlertPage.clickContinue();
 	
 		checkoutPage.clickConfirmOrder();
-		Thread.sleep(3000);
-		String expectedURL=getURL();
-		Assert.assertTrue(expectedURL.contains("route=checkout/success"),"Invalid URL ("+expectedURL+")");
+		
+		Boolean loaded = isURLLoaded("route=checkout/success");
+		Assert.assertTrue(loaded,"Invalid URL ("+getURL()+")");
 		
 	}
 }
