@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="opencart.test.productslist.CartTest">
+      <class name="opencart.test.productslist.WishListTest">
         <methods>
+          <include name="addToWishList"/>
           <include name="loadApplication"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="takeFailedResultScreenshot"/>
-          <include name="addToCart"/>
         </methods>
-      </class> <!-- opencart.test.productslist.CartTest -->
+      </class> <!-- opencart.test.productslist.WishListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

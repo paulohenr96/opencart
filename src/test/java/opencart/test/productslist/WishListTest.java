@@ -46,6 +46,7 @@ public class WishListTest extends BaseTest {
 
 		int indexProduct=1;
 		productListPage.addProductToTheWishList(indexProduct);
+		
 		String expectedMessage="Success: You have added iMac to your wish list!";
 		String actualMessage=productListPage.getNotificationSuccess();
 		boolean successNotification = productListPage.successNotification();
