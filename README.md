@@ -8,13 +8,20 @@
 - Automated tests for the OpenCart E-Commerce
 - The OpenCart application was run locally (the demo application is hosted [here](https://demo.opencart.com/))
 
+## Technologies
+- Eclipse
+- Java
+- Maven
+- Selenium
+- Test NG
+
 ## Installing OpenCart
 - To download the application and run it locally please access this [link](https://www.opencart.com/index.php?route=cms/download)
 
 ## Run the Project
 
-- Download install Java 21
-- Download and install Maven 3.9.9
+- Download install [Java](https://www.oracle.com/br/java/technologies/downloads/#java21)
+- Download and install [Maven](https://maven.apache.org/download.cgi)
 - Configure the appURL variable in the config.properties file (src/test/resources) with the opencart URL
 - Go to the root folder and run the command on cmd
 
