@@ -6,7 +6,7 @@
 
 ## Objective
 - Automated tests for the OpenCart E-Commerce
-- The OpenCart application was run locally
+- The OpenCart application was run locally (the demo application is hosted [here](https://demo.opencart.com/))
 
 ## Installing OpenCart
 - To download the application and run it locally please access this [link](https://www.opencart.com/index.php?route=cms/download)
