@@ -5,17 +5,10 @@ pipeline {
     maven 'MyMaven'
   }
   environment {
-    NEW_VERSION='1.3.0'
+    APP_VERSION='4.1.0.0'
   }
   stages {
-    stage("build"){
-      steps{
-        echo 'building the application...'
-      
-      }
-    }
-
-    
+     
     stage("test"){
       when{
         expression {
@@ -23,19 +16,14 @@ pipeline {
         }
       }
       steps{
+        echo "Testing OPENCART version ${APP_VERSION}"
         bat 'mvn test'
       
       }
     }
 
     
-    stage("deploy"){
-      steps{
-        echo 'deploying the application...'
-      
-      }
-    }
-  
+    
   }
 
 
