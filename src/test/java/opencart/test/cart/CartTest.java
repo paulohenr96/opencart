@@ -1,4 +1,4 @@
-package opencart.test.productslist;
+package opencart.test.cart;
 
 import static opencart.utility.GetUtility.getURL;
 import static opencart.utility.RandomUtility.generateAlphanumeric;
