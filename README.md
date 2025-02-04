@@ -31,6 +31,10 @@ mvn test
 
 - The reports are inside the folder /reports
 
+## Jenkins
+- Download [Jenkins](https://www.jenkins.io/download/)
+- Create a multibranch project and select the Jenkinsfile
+
 
 ## Test Cases
 | Test Case ID | Test Case Description                                               | Steps                                                                                       |
