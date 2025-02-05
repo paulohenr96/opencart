@@ -29,7 +29,7 @@
 mvn test
 ````
 
-- The reports are inside the folder /reports
+- The reports are inside the folder reports
 
 ## Jenkins
 - Download [Jenkins](https://www.jenkins.io/download/)
