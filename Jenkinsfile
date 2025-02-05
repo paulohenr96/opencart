@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Checkout'){
 		steps{
-			checkout([$class:'GitSCM',branches:[[name:'*/main']],userRemoteConfigs:[[url:'https://github.com/paulohenr96/opencart']])
+			checkout([$class:'GitSCM',branches:[[name:'*/main']],userRemoteConfigs:[[url:'https://github.com/paulohenr96/opencart']]])
 		}
 	}
     
