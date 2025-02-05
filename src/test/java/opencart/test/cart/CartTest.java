@@ -19,7 +19,7 @@ public class CartTest extends BaseTest {
 	public void addToCart() throws InterruptedException {
 		homePage.clickMyAccount();
 		RegisterPage registerPage = homePage.goToRegisterPage();
-
+		// generating data
 		String firstName = generateString();
 		String lastName = generateString();
 		String email = generateString() + "@example.com"; 
