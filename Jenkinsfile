@@ -13,7 +13,13 @@ pipeline {
 			checkout([$class:'GitSCM',branches:[[name:'*/main']],userRemoteConfigs:[[url:'https://github.com/paulohenr96/opencart']]])
 		}
 	}
-    
+    stage ("build"){
+		steps{
+			
+			echo "building application"
+		}
+		
+	}
     stage("test"){
     
       steps{
@@ -22,6 +28,13 @@ pipeline {
       
       }
     }
+    
+	stage ("deploy"){
+		steps{
+			echo "deploying application"
+		}
+		
+	}
 
     
     
