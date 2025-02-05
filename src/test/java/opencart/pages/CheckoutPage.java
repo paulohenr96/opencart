@@ -65,13 +65,11 @@ public class CheckoutPage extends BasePage {
 
 	public void selectCountry(String country) {
 		
-		Select countryDropdown = new Select(waitUntilEnabledElement(selectCountry));
-		countryDropdown.selectByVisibleText(country);
+		getSelect(selectCountry).selectByVisibleText(country);
 	}
 
 	public void selectState(String state) {
-		Select stateDropdown = new Select(waitUntilEnabledElement(selectState));
-		stateDropdown.selectByVisibleText(state);
+		getSelect(selectState).selectByVisibleText(state);
 		
 	}
 

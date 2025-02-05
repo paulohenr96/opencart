@@ -1,5 +1,7 @@
 package opencart.pages;
 
+import static opencart.utility.WaitUtility.waitUntilEnabledElement;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -46,5 +48,9 @@ public class BasePage {
 		return driver.findElements(By.xpath("//div[@id='product-list']//div[@class='col mb-3']"));
 	}
 	
+	public Select getSelect(By locator) {
+		return  new Select(waitUntilEnabledElement(locator));
+		
+	}
 	
 }
