@@ -8,7 +8,12 @@ pipeline {
     APP_VERSION='4.1.0.0'
   }
   stages {
-     
+    stage('Checkout'){
+		steps{
+			checkout([$class:'GitSCM',branches:[[name:'*/main']],userRemoteConfigs:[[url:'https://github.com/paulohenr96/opencart']])
+		}
+	}
+    
     stage("test"){
       when{
         expression {
