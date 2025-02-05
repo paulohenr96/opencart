@@ -48,9 +48,7 @@ public class CheckoutTest extends BaseTest {
 		ProductListPage productListPage = homePage.goToMacPage();
 
 		int indexOfTheSelectedProduct=1;
-	
-		
-		
+				
 		productListPage.addProductToCartByIndex(indexOfTheSelectedProduct);
 		String expectedMessage="Success: You have added iMac to your shopping cart!";
 		String actualMessage=productListPage.getNotificationSuccess();
