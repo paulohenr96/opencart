@@ -29,7 +29,7 @@ public class BaseTest {
 	protected BasePage basePage;
 	private String OPENCART_URL;
 	
-	
+	// Get the properties
 	private Properties p;
 	
 	
