@@ -22,7 +22,7 @@ public class BasePage {
 		BasePage.driver=driver;
 	}
 	
-	private WebElement find(By locator) {
+	protected WebElement find(By locator) {
 		return driver.findElement(locator);
 	}
 	public boolean isVisible(By locator) {

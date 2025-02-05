@@ -1,6 +1,7 @@
 package opencart.pages;
 
 import static opencart.utility.JavascriptUtility.javascriptClick;
+import static opencart.utility.WaitUtility.waitUntilEnabledElement;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
@@ -63,12 +64,13 @@ public class CheckoutPage extends BasePage {
 	}
 
 	public void selectCountry(String country) {
-		Select countryDropdown = new Select(driver.findElement(selectCountry));
+		
+		Select countryDropdown = new Select(waitUntilEnabledElement(selectCountry));
 		countryDropdown.selectByVisibleText(country);
 	}
 
 	public void selectState(String state) {
-		Select stateDropdown = new Select(driver.findElement(selectState));
+		Select stateDropdown = new Select(waitUntilEnabledElement(selectState));
 		stateDropdown.selectByVisibleText(state);
 		
 	}
