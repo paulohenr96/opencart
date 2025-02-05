@@ -47,9 +47,9 @@ public class CheckoutTest extends BaseTest {
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.goToMacPage();
 
-		int indexProduct=1;
+		int indexOfTheSelectedProduct=1;
 	
-		productListPage.addProductToCartByIndex(indexProduct);
+		productListPage.addProductToCartByIndex(indexOfTheSelectedProduct);
 		String expectedMessage="Success: You have added iMac to your shopping cart!";
 		String actualMessage=productListPage.getNotificationSuccess();
 		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");
