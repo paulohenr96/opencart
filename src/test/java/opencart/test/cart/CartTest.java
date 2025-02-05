@@ -25,6 +25,7 @@ public class CartTest extends BaseTest {
 		String email = generateString() + "@example.com"; 
 		String password = generateAlphanumeric();
 
+		// register
 		registerPage.setFirstName(firstName);
 		registerPage.setLastName(lastName);
 		registerPage.setEmail(email);
