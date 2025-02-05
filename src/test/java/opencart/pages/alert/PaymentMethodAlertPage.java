@@ -9,6 +9,7 @@ public class PaymentMethodAlertPage extends BasePage {
 	private By btnContinue = By.xpath("//form[@id='form-payment-method']//button[text()='Continue']");
 
 	public void clickContinue() {
+		
 		click(btnContinue);
 
 	}

@@ -32,7 +32,8 @@ public class BasePage {
 	}
 	
 	public void click(By locator) {
-		find(locator).click();
+		waitUntilEnabledElement(locator).click();
+//		find(locator);
 	}
 	
 	public void set(By locator,String text) {
