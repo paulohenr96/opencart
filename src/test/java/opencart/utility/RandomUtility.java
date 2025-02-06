@@ -8,6 +8,9 @@ public class RandomUtility extends Utility{
 	public static String generateString() {
 		return RandomStringUtils.randomAlphabetic(7);
 	}
+	public static String generateString(int length) {
+		return RandomStringUtils.randomAlphabetic(length);
+	}
 	
 	public static String generateNumeric() {
 		return RandomStringUtils.randomNumeric(10);

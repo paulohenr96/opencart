@@ -15,7 +15,7 @@ public class HomePage extends BasePage {
 	private By btnWishList=By.xpath("//a[@id='wishlist-total']//i[@class='fa-solid fa-heart']");
 	private By btnShoppingCart=By.xpath("//span[normalize-space()='Shopping Cart']");
 	private By btnLogout=By.xpath("//a[@class='dropdown-item'][normalize-space()='Logout']");
-	
+	private By btnTelephone=By.xpath("//nav[1]//i[@class='fa-solid fa-phone']");
 	
 	public void clickLogout() {
 		click(btnLogout);
@@ -28,6 +28,11 @@ public class HomePage extends BasePage {
 		return new CartPage();
 	}
 	
+	public ContactPage goToContactPage() {
+	
+		click(btnTelephone);
+		return new ContactPage();
+	}
 	public void clickMyAccount() {
 		click(btnMyAccount);
 	}

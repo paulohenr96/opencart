@@ -21,6 +21,12 @@
 			<class name="opencart.test.wishlist.WishListTest" />
 		</classes>
 	</test>
+	</test>
+		<test name="ContactForm">
+		<classes>
+			<class name="opencart.test.contact.ContactFormTest" />
+		</classes>
+	</test>
 	
 	<test name="Checkout">
 		<classes>
