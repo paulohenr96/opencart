@@ -43,10 +43,10 @@ public class BasePage {
 		return find(locator).getText();
 	}
 	
-	public List<WebElement> getProductsList(int position){
-		
-		return driver.findElements(By.xpath("//div[@id='product-list']//div[@class='col mb-3']"));
-	}
+//	public List<WebElement> getProductsList(int position){
+//		
+//		return driver.findElements(By.xpath("//div[@id='product-list']//div[@class='col mb-3']"));
+//	}
 	
 	public Select getSelect(By locator) {
 		return  new Select(waitUntilEnabledElement(locator));
