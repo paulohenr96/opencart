@@ -17,7 +17,7 @@ public class BasePage {
 	
 	
 	public void selectFieldByIndex(By locator,int index) {
-		new Select(find(locator)).selectByIndex(index);
+		new Select(waitUntilEnabledElement(locator)).selectByIndex(index);
 	}
 	
 	public void setDriver(WebDriver driver) {
@@ -26,6 +26,9 @@ public class BasePage {
 	
 	protected WebElement find(By locator) {
 		return driver.findElement(locator);
+	}
+	protected List<WebElement> findList(By locator){
+		return driver.findElements(locator);
 	}
 	public boolean isVisible(By locator) {
 		return driver.findElement(locator).isDisplayed();
