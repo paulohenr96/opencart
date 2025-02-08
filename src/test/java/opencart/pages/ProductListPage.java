@@ -13,6 +13,11 @@ public class ProductListPage extends HomePage {
 		javascriptClick(By.xpath("//div[@id='product-list']//div[@class='col mb-3'][" + index + "]//button[2]"));
 	}
 
+	public ProductPage goToProductPage(int index) {
+		click(By.xpath("//div[@class='col mb-3']["+index+"]//img"));
+		return new ProductPage();
+	}
+	
 	public void addProductToCartByIndex(int index) {
 
 		javascriptClick(By.xpath("//div[@id='product-list']//div[@class='col mb-3'][" + index + "]//button[1]"));

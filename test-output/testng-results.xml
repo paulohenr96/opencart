@@ -1,70 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-06T16:32:52 BRT" name="Default suite" finished-at="2025-02-06T16:33:07 BRT" duration-ms="15031">
+  <suite started-at="2025-02-08T16:39:34 BRT" name="Default suite" finished-at="2025-02-08T16:40:20 BRT" duration-ms="46387">
     <groups>
     </groups>
-    <test started-at="2025-02-06T16:32:52 BRT" name="Default test" finished-at="2025-02-06T16:33:07 BRT" duration-ms="15031">
-      <class name="opencart.test.cart.EmptyCartUnregisteredUserTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.cart.EmptyCartUnregisteredUserTest@1ff4931d]" started-at="2025-02-06T16:32:52 BRT" name="setUp" finished-at="2025-02-06T16:32:57 BRT" duration-ms="5577" status="PASS">
+    <test started-at="2025-02-08T16:39:34 BRT" name="Default test" finished-at="2025-02-08T16:40:20 BRT" duration-ms="46387">
+      <class name="opencart.test.product.AddToCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.product.AddToCartTest@1ff4931d]" started-at="2025-02-08T16:39:34 BRT" name="setUp" finished-at="2025-02-08T16:39:39 BRT" duration-ms="5330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.cart.EmptyCartUnregisteredUserTest@1ff4931d]" started-at="2025-02-06T16:32:58 BRT" name="loadApplication" finished-at="2025-02-06T16:33:04 BRT" duration-ms="6111" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.product.AddToCartTest@1ff4931d]" started-at="2025-02-08T16:39:39 BRT" name="loadApplication" finished-at="2025-02-08T16:39:45 BRT" duration-ms="5679" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="emptyCartUnregisteredUserTest()[pri:0, instance:opencart.test.cart.EmptyCartUnregisteredUserTest@1ff4931d]" started-at="2025-02-06T16:33:04 BRT" name="emptyCartUnregisteredUserTest" finished-at="2025-02-06T16:33:06 BRT" duration-ms="2010" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Wrong message : Your shopping cart is empty! expected [Yor shopping cart is empty!] but found [Your shopping cart is empty!]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Wrong message : Your shopping cart is empty! expected [Yor shopping cart is empty!] but found [Your shopping cart is empty!]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at opencart.test.cart.EmptyCartUnregisteredUserTest.emptyCartUnregisteredUserTest(EmptyCartUnregisteredUserTest.java:18)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="addProductToCartProductPageTest()[pri:0, instance:opencart.test.product.AddToCartTest@1ff4931d]" started-at="2025-02-08T16:39:45 BRT" name="addProductToCartProductPageTest" finished-at="2025-02-08T16:40:18 BRT" duration-ms="33392" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emptyCartUnregisteredUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.cart.EmptyCartUnregisteredUserTest@1ff4931d]" started-at="2025-02-06T16:33:06 BRT" name="tearDown" finished-at="2025-02-06T16:33:07 BRT" duration-ms="1164" status="PASS">
+        </test-method> <!-- addProductToCartProductPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.product.AddToCartTest@1ff4931d]" started-at="2025-02-08T16:40:18 BRT" name="tearDown" finished-at="2025-02-08T16:40:20 BRT" duration-ms="1805" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- opencart.test.cart.EmptyCartUnregisteredUserTest -->
+      </class> <!-- opencart.test.product.AddToCartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

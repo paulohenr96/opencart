@@ -1,10 +1,17 @@
 package opencart.pages;
 
-import java.util.List;
+import static opencart.utility.JavascriptUtility.javascriptClick;
+import static opencart.utility.JavascriptUtility.scrollToElement;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class ProductPage extends ProductListPage {
 
@@ -22,7 +29,7 @@ public class ProductPage extends ProductListPage {
 	By fieldDateAndTime = By.xpath("//input[@id='input-option-220']");
 	By fieldQuantity = By.xpath("//input[@id='input-quantity']");
 	By fieldAddToCart = By.xpath("//button[@id='button-cart']");
-
+	By successMessage=By.xpath("//div[@class='alert alert-success alert-dismissible']");
 	public String getProductName() {
 		return getInnerText(productName);
 	}
@@ -32,47 +39,84 @@ public class ProductPage extends ProductListPage {
 	}
 
 	public void selectRadioButton(int index) {
-		List<WebElement> radios = findList(fieldRadio);
-		radios.get(index).click();
+		javascriptClick( By.xpath("//div[@id='input-option-218']//div["+index+"]//input"));
 	}
 
 	public void selectCheckbox(int index) {
-		List<WebElement> checkboxes = findList(fieldCheckBox);
-		checkboxes.get(index).click();
+		javascriptClick( By.xpath("//div[@id='input-option-223']//div["+index+"]//input"));
+
 	}
 
 	public void enterText(String text) {
 		set(fieldText, text);
 	}
 
-	public void selectFromDropdown(String optionText) {
-		Select dropdown = getSelect(fieldSelect);
-		dropdown.selectByVisibleText(optionText);
+	public void selectFromDropdown(int index) {
+		selectFieldByIndex(fieldSelect, index);
 	}
 
 	public void enterTextarea(String text) {
 		set(fieldTextarea, text);
 	}
 
-	public void uploadFile(String filePath) {
+	public String getMessageSuccess() {
+		try {
+			
+			return getInnerText(successMessage);
+		}catch(Exception e) {
+			return e.getLocalizedMessage();
+		}
+		
+	}
+	public void uploadFile(String filePath) throws AWTException, InterruptedException {
 		WebElement uploadButton = find(btnUploadFile);
-		uploadButton.sendKeys(filePath);
+//		uploadButton.click();
+		System.out.println(filePath);
+		javascriptClick(btnUploadFile);
+		
+		StringSelection filePathSelection=new StringSelection(filePath);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePathSelection, null);
+		Thread.sleep(5000);
+
+		Robot rb=new Robot();
+		
+		
+		rb.keyPress(KeyEvent.VK_CONTROL);
+		rb.keyPress(KeyEvent.VK_V);
+		rb.keyRelease(KeyEvent.VK_V);
+		rb.keyRelease(KeyEvent.VK_CONTROL);
+		
+		Thread.sleep(5000);
+		
+		rb.keyPress(KeyEvent.VK_ENTER);
+		rb.keyRelease(KeyEvent.VK_ENTER);
+
+		Thread.sleep(5000);
+//		rb.keyPress(KeyEvent.VK_ENTER);
+//		rb.keyRelease(KeyEvent.VK_ENTER);
+		driver.switchTo().alert().accept();
 	}
 
 	public void enterDate(String date) {
 		set(fieldDate, date);
+//		javascriptClick(fieldDate);
 	}
 
 	public void enterTime(String time) {
+//		scrollToElement(fieldTime);
+//		javascriptClick(fieldTime);
+		
 		set(fieldTime, time);
 	}
 
 	public void enterDateAndTime(String dateTime) {
-		set(fieldDateAndTime, dateTime);
+//		set(fieldDateAndTime, dateTime);
+		driver.findElement(fieldDateAndTime).sendKeys(dateTime.split(" ")[0]+Keys.TAB+dateTime.split(" ")[1]);
+
 	}
 
-	public void setQuantity(String quantity) {
-		set(fieldQuantity,quantity);
+	public void setQuantity(String i) {
+		set(fieldQuantity,i);
 		
 	}
 

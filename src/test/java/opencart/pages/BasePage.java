@@ -39,7 +39,9 @@ public class BasePage {
 	}
 	
 	public void set(By locator,String text) {
-		find(locator).sendKeys(text);
+		WebElement element = find(locator);
+		element.clear();
+		element.sendKeys(text);
 	}
 	
 	public String  getInnerText(By locator) {
