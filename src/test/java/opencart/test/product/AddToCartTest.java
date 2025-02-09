@@ -33,6 +33,6 @@ public class AddToCartTest extends BaseTest{
 		productPage.setQuantity("2");
 		productPage.addToCart();
 		String actualMsg=productPage.getMessageSuccess();
-		Assert.assertTrue(actualMsg.contains("Success: You have added"));
+		Assert.assertTrue(actualMsg.contains("Success: You have added"),"Incorrect message => "+actualMsg);
 	}
 }

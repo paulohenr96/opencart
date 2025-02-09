@@ -14,34 +14,43 @@
 	<test name="CartTest">
 		<classes>
 			<class name="opencart.test.cart.CartTest" />
+			<class name="opencart.test.cart.EmptyCartUnregisteredUserTest" />
+
 		</classes>
 	</test>
-		<test name="WishlistTest">
+	<test name="WishlistTest">
 		<classes>
 			<class name="opencart.test.wishlist.WishListTest" />
 		</classes>
 	</test>
-	</test>
-		<test name="ContactForm">
+	<test name="ContactForm">
 		<classes>
 			<class name="opencart.test.contact.ContactFormTest" />
 		</classes>
 	</test>
-	
+
 	<test name="Checkout">
 		<classes>
 			<class name="opencart.test.checkout.CheckoutTest" />
 		</classes>
 	</test>
-	
-	<test name="Register">
+
+	<test name="Product">
 		<classes>
-			<class name="opencart.test.register.RegisterTest" />
-			<class name="opencart.test.register.RegisterDisagreePrivacyPolicyTest" />
-			
+			<class name="opencart.test.product.AddToCartTest" />
 		</classes>
 	</test>
 
-	
+
+	<test name="Register">
+		<classes>
+			<class name="opencart.test.register.RegisterTest" />
+			<class
+				name="opencart.test.register.RegisterDisagreePrivacyPolicyTest" />
+
+		</classes>
+	</test>
+
+
 
 </suite> <!-- Suite -->

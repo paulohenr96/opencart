@@ -2,6 +2,7 @@ package opencart.pages;
 
 import static opencart.utility.JavascriptUtility.javascriptClick;
 import static opencart.utility.JavascriptUtility.scrollToElement;
+import static opencart.utility.WaitUtility.waitAlert;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -71,16 +72,15 @@ public class ProductPage extends ProductListPage {
 	public void uploadFile(String filePath) throws AWTException, InterruptedException {
 		WebElement uploadButton = find(btnUploadFile);
 //		uploadButton.click();
-		System.out.println(filePath);
 		javascriptClick(btnUploadFile);
 		
 		StringSelection filePathSelection=new StringSelection(filePath);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePathSelection, null);
-		Thread.sleep(5000);
 
 		Robot rb=new Robot();
 		
-		
+		Thread.sleep(5000);
+
 		rb.keyPress(KeyEvent.VK_CONTROL);
 		rb.keyPress(KeyEvent.VK_V);
 		rb.keyRelease(KeyEvent.VK_V);
@@ -91,10 +91,9 @@ public class ProductPage extends ProductListPage {
 		rb.keyPress(KeyEvent.VK_ENTER);
 		rb.keyRelease(KeyEvent.VK_ENTER);
 
-		Thread.sleep(5000);
 //		rb.keyPress(KeyEvent.VK_ENTER);
 //		rb.keyRelease(KeyEvent.VK_ENTER);
-		driver.switchTo().alert().accept();
+		waitAlert().accept();
 	}
 
 	public void enterDate(String date) {
