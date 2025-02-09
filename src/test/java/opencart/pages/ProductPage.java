@@ -39,12 +39,12 @@ public class ProductPage extends ProductListPage {
 		click(btnWishList);
 	}
 
-	public void selectRadioButton(int index) {
-		javascriptClick( By.xpath("//div[@id='input-option-218']//div["+index+"]//input"));
+	public void selectRadioButton(int indexRadioButton) {
+		javascriptClick( By.xpath("//div[@id='input-option-218']//div["+indexRadioButton+"]//input"));
 	}
 
-	public void selectCheckbox(int index) {
-		javascriptClick( By.xpath("//div[@id='input-option-223']//div["+index+"]//input"));
+	public void selectCheckbox(int indexCheckbox) {
+		javascriptClick( By.xpath("//div[@id='input-option-223']//div["+indexCheckbox+"]//input"));
 
 	}
 
@@ -52,12 +52,12 @@ public class ProductPage extends ProductListPage {
 		set(fieldText, text);
 	}
 
-	public void selectFromDropdown(int index) {
-		selectFieldByIndex(fieldSelect, index);
+	public void selectFromDropdown(int indexSelect) {
+		selectFieldByIndex(fieldSelect, indexSelect);
 	}
 
-	public void enterTextarea(String text) {
-		set(fieldTextarea, text);
+	public void enterTextarea(String textArea) {
+		set(fieldTextarea, textArea);
 	}
 
 	public String getMessageSuccess() {
@@ -71,8 +71,8 @@ public class ProductPage extends ProductListPage {
 	}
 	public void uploadFile(String filePath) throws AWTException, InterruptedException {
 		WebElement uploadButton = find(btnUploadFile);
-//		uploadButton.click();
-		javascriptClick(btnUploadFile);
+		uploadButton.sendKeys(filePath);
+		
 		
 		StringSelection filePathSelection=new StringSelection(filePath);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePathSelection, null);
@@ -114,8 +114,8 @@ public class ProductPage extends ProductListPage {
 
 	}
 
-	public void setQuantity(String i) {
-		set(fieldQuantity,i);
+	public void setQuantity(String quantity) {
+		set(fieldQuantity,quantity);
 		
 	}
 
