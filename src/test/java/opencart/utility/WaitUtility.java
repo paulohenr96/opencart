@@ -2,6 +2,7 @@ package opencart.utility;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -24,5 +25,12 @@ public class WaitUtility extends Utility{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 
+	}
+	
+	public static Alert waitAlert() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
+
+		wait.until(ExpectedConditions.alertIsPresent());
+		return driver.switchTo().alert();
 	}
 }
