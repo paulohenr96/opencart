@@ -23,18 +23,18 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import opencart.pages.BasePage;
 
 public class ExtentReportManager implements ITestListener {
-	public ExtentSparkReporter sparkReporter;
-	public ExtentReports extent;
+	public static ExtentSparkReporter  sparkReporter;
+	public static ExtentReports extent;
 	public ExtentTest test;
 
-	public void onStart(ITestContext context) {
-		String fileName="Test-Report_"+context.getName()+"_"+new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/"+fileName+".html");
+	public static void createInstance() {
+		String fileName="report";
 
+		sparkReporter= new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/"+fileName+".html");
 		sparkReporter.config().setDocumentTitle("Automation Report");
 		sparkReporter.config().setReportName("Functional Testing");
 		sparkReporter.config().setTheme(Theme.DARK);
-
+		
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		extent.setSystemInfo("Computer Name", "localhost");
@@ -42,6 +42,17 @@ public class ExtentReportManager implements ITestListener {
 		extent.setSystemInfo("Tester Name", "Paulo Henrique");
 		extent.setSystemInfo("os", "Windows10");
 		extent.setSystemInfo("Browser name", "Chrome");
+	}
+	
+	public void onStart(ITestContext context) {
+//		String fileName="Test-Report_"+context.getName()+"_"+new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+//		String fileName="report";
+//		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/"+fileName+".html");
+		
+//		sparkReporter.config().setDocumentTitle("Automation Report");
+//		sparkReporter.config().setReportName("Functional Testing");
+//		sparkReporter.config().setTheme(Theme.DARK);
+		
 
 	}
 
@@ -56,7 +67,7 @@ public class ExtentReportManager implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.addScreenCaptureFromPath(captureScreen(result));
-		test.log(Status.FAIL, "Test case FAILED is:" + result.getName());
+		test.log(Status.FAIL, "Test case FAILED is: " + result.getName());
 		test.log(Status.FAIL, "Test case FAILED cause is:" + result.getThrowable());
 
 	}
@@ -68,11 +79,11 @@ public class ExtentReportManager implements ITestListener {
 
 	}
 
-	public void onFinish(ITestContext context) {
+	
+	public static void flush() {
 		extent.flush();
+
 	}
-	
-	
 	public String captureScreen(ITestResult result) {
 		
 		TakesScreenshot screenshot=(TakesScreenshot) (BasePage.driver);
@@ -87,8 +98,7 @@ public class ExtentReportManager implements ITestListener {
 		}catch(IOException e) {
 			throw new RuntimeException(e);
 		}
-		System.out.println("Screen shot located at "+destination);
-		
+	
 		return destination.toString();
 	}
 
