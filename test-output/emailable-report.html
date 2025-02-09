@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">LoginTest</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">62.113</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">CartTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">32.754</td><td></td><td></td></tr>
+<tr><td><a href="#t2">WishlistTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">21.399</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">ContactForm</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">16.737</td><td></td><td></td></tr>
+<tr><td><a href="#t4">Checkout</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">43.727</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">Product</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">41.282</td><td></td><td></td></tr>
+<tr><td><a href="#t6">Register</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">33.523</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">10</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">251.535</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">opencart.test.login.LoginEmptyFieldsTest</td><td><a href="#m0">emptyFieldsLogin</a></td><td rowspan="1">1739138143781</td><td rowspan="1">2955</td></tr><tr class="passedodd"><td rowspan="1">opencart.test.login.LoginInvalidEmailTest</td><td><a href="#m1">invalidEmailTest</a></td><td rowspan="1">1739138158303</td><td rowspan="1">3023</td></tr><tr class="passedeven"><td rowspan="1">opencart.test.login.LoginTest</td><td><a href="#m2">successfulLogin</a></td><td rowspan="1">1739138112351</td><td rowspan="1">20214</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">CartTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">opencart.test.cart.CartTest</td><td><a href="#m3">addToCart</a></td><td rowspan="1">1739138172754</td><td rowspan="1">7897</td></tr><tr class="passedodd"><td rowspan="1">opencart.test.cart.EmptyCartUnregisteredUserTest</td><td><a href="#m4">emptyCartUnregisteredUserTest</a></td><td rowspan="1">1739138191832</td><td rowspan="1">1976</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">WishlistTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">opencart.test.wishlist.WishListTest</td><td><a href="#m5">addToWishList</a></td><td rowspan="1">1739138206514</td><td rowspan="1">9078</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">ContactForm &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">opencart.test.contact.ContactFormTest</td><td><a href="#m6">contactFormSuccessful</a></td><td rowspan="1">1739138223675</td><td rowspan="1">8335</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">Checkout &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">opencart.test.checkout.CheckoutTest</td><td><a href="#m7">addToCart</a></td><td rowspan="1">1739138245313</td><td rowspan="1">30455</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">Product &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">opencart.test.product.AddToCartTest</td><td><a href="#m8">addProductToCartProductPageTest</a></td><td rowspan="1">1739138285278</td><td rowspan="1">31725</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">Register &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">opencart.test.register.RegisterDisagreePrivacyPolicyTest</td><td><a href="#m9">disagreePrivacyPolicyRegister</a></td><td rowspan="1">1739138345969</td><td rowspan="1">3457</td></tr><tr class="passedodd"><td rowspan="1">opencart.test.register.RegisterTest</td><td><a href="#m10">successfulRegister</a></td><td rowspan="1">1739138327593</td><td rowspan="1">6242</td></tr></tbody>
+</table>
+<h2>LoginTest</h2><h3 id="m0">opencart.test.login.LoginEmptyFieldsTest#emptyFieldsLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">opencart.test.login.LoginInvalidEmailTest#invalidEmailTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">opencart.test.login.LoginTest#successfulLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>CartTest</h2><h3 id="m3">opencart.test.cart.CartTest#addToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">opencart.test.cart.EmptyCartUnregisteredUserTest#emptyCartUnregisteredUserTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>WishlistTest</h2><h3 id="m5">opencart.test.wishlist.WishListTest#addToWishList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ContactForm</h2><h3 id="m6">opencart.test.contact.ContactFormTest#contactFormSuccessful</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Checkout</h2><h3 id="m7">opencart.test.checkout.CheckoutTest#addToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Product</h2><h3 id="m8">opencart.test.product.AddToCartTest#addProductToCartProductPageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.28.0&apos;, revision: &apos;ac342546e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\paulo\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58781}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58781/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a33a3c3a074d8e1bfd1560e5e4cdd990
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at opencart.utility.WaitUtility.waitAlert(WaitUtility.java:33)
+	at opencart.pages.ProductPage.uploadFile(ProductPage.java:96)
+	at opencart.test.product.AddToCartTest.addProductToCartProductPageTest(AddToCartTest.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Register</h2><h3 id="m9">opencart.test.register.RegisterDisagreePrivacyPolicyTest#disagreePrivacyPolicyRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">opencart.test.register.RegisterTest#successfulRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
