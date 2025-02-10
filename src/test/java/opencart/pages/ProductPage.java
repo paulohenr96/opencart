@@ -24,7 +24,7 @@ public class ProductPage extends ProductListPage {
 	By fieldSelect = By.xpath("//select[@id='input-option-217']");
 	By fieldTextarea = By.xpath("//textarea[@id='input-option-209']");
 	By btnUploadFile = By.xpath("//button[@id='button-upload-222']");
-
+	By fieldUpload=By.xpath("//input[@type='file']");
 	By fieldDate = By.xpath("//input[@id='input-option-219']");
 	By fieldTime = By.xpath("//input[@id='input-option-221']");
 	By fieldDateAndTime = By.xpath("//input[@id='input-option-220']");
@@ -71,12 +71,15 @@ public class ProductPage extends ProductListPage {
 	}
 	public void uploadFile(String filePath) throws AWTException, InterruptedException {
 		WebElement uploadButton = find(btnUploadFile);
-		uploadButton.sendKeys(filePath);
+//		find(fieldUpload).sendKeys(filePath);
 		
 		
 		StringSelection filePathSelection=new StringSelection(filePath);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePathSelection, null);
 
+		
+		javascriptClick(btnUploadFile);
+		
 		Robot rb=new Robot();
 		
 		Thread.sleep(5000);
@@ -91,8 +94,8 @@ public class ProductPage extends ProductListPage {
 		rb.keyPress(KeyEvent.VK_ENTER);
 		rb.keyRelease(KeyEvent.VK_ENTER);
 
-//		rb.keyPress(KeyEvent.VK_ENTER);
-//		rb.keyRelease(KeyEvent.VK_ENTER);
+		rb.keyPress(KeyEvent.VK_ENTER);
+		rb.keyRelease(KeyEvent.VK_ENTER);
 		waitAlert().accept();
 	}
 

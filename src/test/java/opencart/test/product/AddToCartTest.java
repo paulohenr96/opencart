@@ -27,7 +27,7 @@ public class AddToCartTest extends BaseTest{
 		int indexRadioButton = 2;
 		int indexSelect = 2;
 		int indexProduct = 1;
-
+ 
 		homePage.clickComponents();
 		MonitorsPage monitorsPage = homePage.goToMonitorsPage();
 		

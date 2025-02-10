@@ -29,7 +29,6 @@ public class WaitUtility extends Utility{
 	
 	public static Alert waitAlert() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
-
 		wait.until(ExpectedConditions.alertIsPresent());
 		return driver.switchTo().alert();
 	}
