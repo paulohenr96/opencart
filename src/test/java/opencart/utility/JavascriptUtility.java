@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class JavascriptUtility extends Utility {
 
-	private static void script(By locator, String script) {
+	public static void script(By locator, String script) {
 		WebElement element = driver.findElement(locator);
 
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;

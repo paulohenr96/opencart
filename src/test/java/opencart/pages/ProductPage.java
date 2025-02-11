@@ -1,16 +1,14 @@
 package opencart.pages;
 
 import static opencart.utility.JavascriptUtility.javascriptClick;
-import static opencart.utility.JavascriptUtility.scrollToElement;
 import static opencart.utility.WaitUtility.waitAlert;
 
 import java.awt.AWTException;
 import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
@@ -70,32 +68,18 @@ public class ProductPage extends ProductListPage {
 		
 	}
 	public void uploadFile(String filePath) throws AWTException, InterruptedException {
-		WebElement uploadButton = find(btnUploadFile);
-//		find(fieldUpload).sendKeys(filePath);
 		
-		
-		StringSelection filePathSelection=new StringSelection(filePath);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePathSelection, null);
+	
+        javascriptClick(btnUploadFile);
+		Thread.sleep(1000);
 
-		
-		javascriptClick(btnUploadFile);
-		
 		Robot rb=new Robot();
-		
 		Thread.sleep(5000);
 
-		rb.keyPress(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_V);
-		rb.keyRelease(KeyEvent.VK_V);
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		
-		Thread.sleep(5000);
-		
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
+		rb.keyPress(KeyEvent.VK_ESCAPE);
+		rb.keyRelease(KeyEvent.VK_ESCAPE);
+		driver.findElements(By.xpath("//input")).get(0).sendKeys(filePath);
 
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
 		waitAlert().accept();
 	}
 

@@ -35,13 +35,14 @@ public class BaseTest {
 	public void setSuite() {
 		ExtentReportManager.createInstance();
         PropertyConfigurator.configure(System.getProperty("user.dir")+"/src/test/resources/"+"log4j.properties");
+        logger.info("===============================================");
+
         logger.info("*** Starting Suite ***");
 
 	}
 	
 	@BeforeClass
 	public void setUp() throws IOException {
-        logger.info("********* TEST ENDED *********");
 
 		FileReader file = new FileReader("./src//test//resources//config.properties");
 		p = new Properties();
@@ -77,6 +78,7 @@ public class BaseTest {
 
 		ExtentReportManager.flush();
         logger.info("*** Suite Ended ***");
+        logger.info("===============================================");
 
 	}
 }

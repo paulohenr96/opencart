@@ -55,6 +55,8 @@ public class AddToCartTest extends BaseTest{
 		productPage.enterDateAndTime(dateTime);
 		productPage.setQuantity(quantity);
 		
+		
+		logger.info("Adding to the cart...");
 		productPage.addToCart();
 		
 		String actualMsg=productPage.getMessageSuccess();
