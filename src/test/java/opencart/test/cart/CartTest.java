@@ -17,15 +17,21 @@ public class CartTest extends BaseTest {
 
 	@Test
 	public void addToCart() throws InterruptedException {
+        logger.info("*** Start CartTest ***");
+        logger.info("Going to register page...");
+
 		homePage.clickMyAccount();
+		
 		RegisterPage registerPage = homePage.goToRegisterPage();
-		// generating data
+      
+		logger.info("Generating data...");
+
 		String firstName = generateString();
 		String lastName = generateString();
 		String email = generateString() + "@example.com"; 
 		String password = generateAlphanumeric();
 
-		// register
+		logger.info("Setting the fields...");
 		registerPage.setFirstName(firstName);
 		registerPage.setLastName(lastName);
 		registerPage.setEmail(email);
@@ -35,17 +41,21 @@ public class CartTest extends BaseTest {
 		registerPage.clickContinue();
 		
 			
+		logger.info("Checking the URL...");
 		String expectedFractionURL="route=account/success";
 		Boolean urlLoaded = isURLLoaded(expectedFractionURL);
 		Assert.assertTrue(urlLoaded,"Invalid URL ("+getURL()+")");
 		
 
+		logger.info("Going to MacPage...");
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.goToMacPage();
 
 		int indexOfProduct=1;
 		
+
 		productListPage.addProductToCartByIndex(indexOfProduct);
+		logger.info("Checking message...");
 		String expectedMessage="Success: You have added iMac to your shopping cart!";
 		String actualMessage=productListPage.getNotificationSuccess();
 		

@@ -16,6 +16,8 @@ public class AddToCartTest extends BaseTest{
 	
 	@Test
 	public void addProductToCartProductPageTest() throws InterruptedException, AWTException {
+		logger.info("*** Starting AddToCartTest ***");
+
 		String pathFile=System.getProperty("user.dir")+"\\resources\\sample.txt";
 		String date="25082018";
 		String time = "0722";
@@ -28,11 +30,20 @@ public class AddToCartTest extends BaseTest{
 		int indexSelect = 2;
 		int indexProduct = 1;
  
+		logger.info("Going to monitorspage...");
+
 		homePage.clickComponents();
 		MonitorsPage monitorsPage = homePage.goToMonitorsPage();
 		
+		
+		
+		logger.info("Going to productpage...");
+
 		ProductPage productPage = monitorsPage.goToProductPage(indexProduct);
 		
+		
+		logger.info("Setting the fields...");
+
 		productPage.selectRadioButton(indexRadioButton);
 		productPage.selectCheckbox(indexCheckbox);
 		productPage.enterText(text);

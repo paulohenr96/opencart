@@ -14,8 +14,17 @@ public class ContactFormTest extends BaseTest{
 	
 	@Test
 	public void contactFormSuccessful() throws InterruptedException {
+		
+		logger.info("*** Starting contactFormSuccessful ***");
+
+		
+		logger.info("Going to contact page...");
+
 		ContactPage contactPage = homePage.goToContactPage();
 		
+		
+		logger.info("Setting fields ...");
+
 		contactPage.setFieldYourName(generateString());
 		contactPage.setFieldEmailAddress(generateString()+"@email.com");
 		contactPage.setFieldEnquiry(generateString(50));

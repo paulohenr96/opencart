@@ -15,9 +15,14 @@ public class RegisterTest extends BaseTest {
 
 	@Test
 	public void successfulRegister() throws InterruptedException {
+		
+		logger.info("*** Starting RegisterTest ***");
+
 		homePage.clickMyAccount();
 		RegisterPage registerPage = homePage.goToRegisterPage();
 
+		
+		logger.info("Setting fields... ");
 		String firstName = generateString();
 		String lastName = generateString();
 		String email = generateString() + "@example.com"; 
@@ -29,6 +34,9 @@ public class RegisterTest extends BaseTest {
 		registerPage.setPassword(password);
 		registerPage.clickNewsletter(); 
 		registerPage.clickAgree();
+		
+		
+		logger.info("Clicking continue... ");
 		registerPage.clickContinue();
 		
 		String expectedFractionUrl="route=account/success";

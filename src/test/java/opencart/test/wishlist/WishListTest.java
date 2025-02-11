@@ -17,10 +17,16 @@ public class WishListTest extends BaseTest {
 
 	@Test
 	public void addToWishList() throws InterruptedException {
+		logger.info("*** Starting WishListTest ***");
+
 		
+		logger.info("Going to register page...");
 		homePage.clickMyAccount();
 		RegisterPage registerPage = homePage.goToRegisterPage();
 
+		
+		
+		logger.info("Setting fields...");
 		String firstName = generateString();
 		String lastName = generateString();
 		String email = generateString() + "@example.com"; 
@@ -38,9 +44,13 @@ public class WishListTest extends BaseTest {
 		Boolean urlLoaded = isURLLoaded(expectedFractionURL);
 		Assert.assertTrue(urlLoaded,"Invalid URL ("+getURL()+")");
 		
+		
+		logger.info("Going to macpage...");
 		homePage.clickDesktops();
 		ProductListPage productListPage = homePage.goToMacPage();
 
+		
+		logger.info("Adding to wishlist...");
 		int indexProduct=1;
 		productListPage.addProductToTheWishList(indexProduct);
 		

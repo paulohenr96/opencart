@@ -45,19 +45,10 @@ public class ExtentReportManager implements ITestListener {
 		
 	}
 	
-	public void onStart(ITestContext context) {
-//		String fileName="Test-Report_"+context.getName()+"_"+new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-//		String fileName="report";
-//		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/"+fileName+".html");
-		
-//		sparkReporter.config().setDocumentTitle("Automation Report");
-//		sparkReporter.config().setReportName("Functional Testing");
-//		sparkReporter.config().setTheme(Theme.DARK);
-		
 
-	}
 
 	public void onTestSuccess(ITestResult result) {
+
 		test = extent.createTest(result.getName());
 		test.addScreenCaptureFromPath(captureScreen(result));
 

@@ -14,8 +14,14 @@ public class LoginEmptyFieldsTest extends BaseTest {
 	
 	@Test
 	public void emptyFieldsLogin() throws InterruptedException {
+		logger.info("*** Starting LoginEmptyFieldsTest ***");
+
+		
+		logger.info("Going to login page...");
+
 		homePage.clickMyAccount();
 		LoginPage loginPage = homePage.goToLoginPage();
+		
 		
 		loginPage.clickLogin();
 		String actualMessage=loginPage.getNotification();

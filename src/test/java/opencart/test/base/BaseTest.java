@@ -1,26 +1,19 @@
 package opencart.test.base;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.util.Properties;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.io.FileHandler;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
-import com.aventstack.extentreports.ExtentReports;
 
 import opencart.pages.BasePage;
 import opencart.pages.HomePage;
@@ -33,17 +26,23 @@ public class BaseTest {
 	protected HomePage homePage;
 	protected BasePage basePage;
 	private String OPENCART_URL;
-	
+    protected static Logger logger = Logger.getLogger(BaseTest.class);
+
 	// Get the properties
 	private Properties p;
 	
 	@BeforeSuite
 	public void setSuite() {
 		ExtentReportManager.createInstance();
+        PropertyConfigurator.configure(System.getProperty("user.dir")+"/src/test/resources/"+"log4j.properties");
+        logger.info("*** Starting Suite ***");
+
 	}
 	
 	@BeforeClass
 	public void setUp() throws IOException {
+        logger.info("********* TEST ENDED *********");
+
 		FileReader file = new FileReader("./src//test//resources//config.properties");
 		p = new Properties();
 		p.load(file);
@@ -68,10 +67,16 @@ public class BaseTest {
 	@AfterClass
 	public void tearDown() {
 		driver.quit(); 
+        logger.info("********* TEST ENDED *********");
+
 	}
 	
 	@AfterSuite
 	public void flushSuite() {
+        logger.info("*** Flushing report... ***");
+
 		ExtentReportManager.flush();
+        logger.info("*** Suite Ended ***");
+
 	}
 }

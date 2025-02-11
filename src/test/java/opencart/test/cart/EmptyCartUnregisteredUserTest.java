@@ -11,8 +11,11 @@ public class EmptyCartUnregisteredUserTest extends BaseTest {
 	
 	@Test
 	public void emptyCartUnregisteredUserTest() {
+	    logger.info("*** Start emptyCartUnregisteredUserTest ***");
+        logger.info("Going to shoppingcart page...");
 		CartPage cartPage = homePage.goToShoppingCartPage();
 		
+        logger.info("Checking message...");
 		String actualMessage=cartPage.checkMessage();
 		String expectedMessage="Your shopping cart is empty!";
 		Assert.assertEquals(actualMessage, expectedMessage,"Wrong message : "+actualMessage);
