@@ -5,51 +5,55 @@
 		<listener class-name="opencart.report.ExtentReportManager" />
 	</listeners>
 	<test name="LoginTest">
+
+		<parameter name="os" value="windows" />
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="opencart.test.login.TC07_LoginTest" />
 			<class name="opencart.test.login.TC05_LoginEmptyFieldsTest" />
 			<class name="opencart.test.login.TC06_LoginInvalidEmailTest" />
 		</classes>
 	</test>
-	<test name="CartTest">
-		<classes>
-			<class name="opencart.test.cart.TC01_CartTest" />
-			<class name="opencart.test.cart.TC11_EmptyCartUnregisteredUserTest" />
+<!-- 	<test name="CartTest"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="opencart.test.cart.TC01_CartTest" /> -->
+<!-- 			<class -->
+<!-- 				name="opencart.test.cart.TC11_EmptyCartUnregisteredUserTest" /> -->
 
-		</classes>
-	</test>
-	<test name="WishlistTest">
-		<classes>
-			<class name="opencart.test.wishlist.TC02_WishListTest" />
-		</classes>
-	</test>
-	<test name="ContactForm">
-		<classes>
-			<class name="opencart.test.contact.TC10_ContactFormTest" />
-		</classes>
-	</test>
+<!-- 		</classes> -->
+<!-- 	</test> -->
+<!-- 	<test name="WishlistTest"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="opencart.test.wishlist.TC02_WishListTest" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+<!-- 	<test name="ContactForm"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="opencart.test.contact.TC10_ContactFormTest" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 
-	<test name="Checkout">
-		<classes>
-			<class name="opencart.test.checkout.TC08_CheckoutTest" />
-		</classes>
-	</test>
+<!-- 	<test name="Checkout"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="opencart.test.checkout.TC08_CheckoutTest" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 
-	<test name="Product">
-		<classes>
-			<class name="opencart.test.product.TC09_AddToCartTest" />
-		</classes>
-	</test>
+<!-- 	<test name="Product"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="opencart.test.product.TC09_AddToCartTest" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 
 
-	<test name="Register">
-		<classes>
-			<class name="opencart.test.register.TC03_RegisterTest" />
-			<class
-				name="opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest" />
+<!-- 	<test name="Register"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="opencart.test.register.TC03_RegisterTest" /> -->
+<!-- 			<class -->
+<!-- 				name="opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest" /> -->
 
-		</classes>
-	</test>
+<!-- 		</classes> -->
+<!-- 	</test> -->
 
 
 

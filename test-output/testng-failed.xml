@@ -4,28 +4,40 @@
   <listeners>
     <listener class-name="opencart.report.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="CartTest(failed)">
+  <test thread-count="5" name="LoginTest(failed)">
+    <parameter name="os" value="linux"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="opencart.test.cart.TC01_CartTest">
+      <class name="opencart.test.login.TC06_LoginInvalidEmailTest">
         <methods>
           <include name="flushSuite"/>
           <include name="loadApplication"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setSuite"/>
-          <include name="addToCart"/>
+          <include name="invalidEmailTest"/>
         </methods>
-      </class> <!-- opencart.test.cart.TC01_CartTest -->
-      <class name="opencart.test.cart.TC11_EmptyCartUnregisteredUserTest">
+      </class> <!-- opencart.test.login.TC06_LoginInvalidEmailTest -->
+      <class name="opencart.test.login.TC07_LoginTest">
+        <methods>
+          <include name="loadApplication"/>
+          <include name="flushSuite"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="successfulLogin"/>
+          <include name="setSuite"/>
+        </methods>
+      </class> <!-- opencart.test.login.TC07_LoginTest -->
+      <class name="opencart.test.login.TC05_LoginEmptyFieldsTest">
         <methods>
           <include name="flushSuite"/>
           <include name="loadApplication"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="emptyFieldsLogin"/>
           <include name="setSuite"/>
-          <include name="emptyCartUnregisteredUserTest"/>
         </methods>
-      </class> <!-- opencart.test.cart.TC11_EmptyCartUnregisteredUserTest -->
+      </class> <!-- opencart.test.login.TC05_LoginEmptyFieldsTest -->
     </classes>
-  </test> <!-- CartTest(failed) -->
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

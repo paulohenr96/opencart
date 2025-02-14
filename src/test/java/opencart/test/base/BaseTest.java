@@ -2,18 +2,23 @@ package opencart.test.base;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import opencart.pages.BasePage;
 import opencart.pages.HomePage;
@@ -40,9 +45,9 @@ public class BaseTest {
         logger.info("*** Starting Suite ***");
 
 	}
-	
+	@Parameters({ "os", "browser" })
 	@BeforeClass
-	public void setUp() throws IOException {
+	public void setUp(String os,String br) throws IOException {
 
 		FileReader file = new FileReader("./src//test//resources//config.properties");
 		p = new Properties();
@@ -50,7 +55,56 @@ public class BaseTest {
 		OPENCART_URL=p.getProperty("appURL");
 		
 		
-		driver=new ChromeDriver();
+		
+		
+		if ( p.getProperty("execution_env").equalsIgnoreCase("remote")) {
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+
+			if (os.equalsIgnoreCase("windows")) {
+				capabilities.setPlatform(Platform.WIN10);
+			} else if (os.equalsIgnoreCase("mac")) {
+				capabilities.setPlatform(Platform.MAC);
+
+			} else if (os.equalsIgnoreCase("linux")) {
+				capabilities.setPlatform(Platform.LINUX);
+			}
+
+			else {
+				System.out.println("No matching os");
+			}
+
+			switch (br.toLowerCase()) {
+
+			case "chrome":
+				capabilities.setBrowserName("chrome");
+				break;
+			case "edge":
+				capabilities.setBrowserName("MicrosoftEdge");
+				break;
+			case "firefox":
+				capabilities.setBrowserName("firefox");
+				break;
+
+			default:
+				System.out.println("No matching browser name...");
+				return;
+
+			}
+
+			try {
+				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else {
+			
+			driver=new ChromeDriver();
+		}
+		
+		
+		
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
