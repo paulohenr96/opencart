@@ -17,7 +17,7 @@ import opencart.pages.alert.PaymentMethodAlertPage;
 import opencart.pages.alert.ShippingMethodAlertPage;
 import opencart.test.base.BaseTest;
 
-public class CheckoutTest extends BaseTest {
+public class TC08_CheckoutTest extends BaseTest {
 
 	@Test
 	public void addToCart() throws InterruptedException {

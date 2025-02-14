@@ -39,7 +39,7 @@ mvn test
 ## Test Cases
 | Test Case ID | Test Case Description                                               | Steps                                                                                       |
 |--------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| TC01         | User adds a product to the cart                                    | 1. Create user<br>2. Add a product to the cart                                             |
+| TC01         | User adds a product to the cart in the product list                                    | 1. Create user<br>2. Add a product to the cart                                             |
 | TC02         | User adds a product to the wishlist                                | 1. Create user<br>2. Add a product to the wishlist                                         |
 | TC03         | User registers an account                                          | 1. Create user                                                                             |
 | TC04         | User tries to register without agreeing to the privacy policy     | 1. Create a user without clicking the privacy policy button                                |
@@ -47,3 +47,6 @@ mvn test
 | TC06         | Login with invalid email                                           | 1. Attempt to login with an invalid email                                                  |
 | TC07         | Successful login                                                   | 1. Register user<br>2. Logout<br>3. Login with the newly created user                      |
 | TC08         | Checkout process                                                   | 1. Create user<br>2. Add product to the cart<br>3. Go to the checkout page<br>4. Register the address for the new user<br>5. Select the address<br>6. Select the payment method<br>7. Confirm order |
+| TC09         | User adds a product to the cart in the product page                                                | 1. Go to the product page<br>2. Fill the form<br>3. Add to the cart |
+| TC10         | Fil the contact form                                                   | 1. Go to the contact page<br> 2.Fill the contact form |
+| TC11         | Unregistered user check the cart page                                                  | 1. Click in the cart icon<br>2. Go to the cart page<br> |

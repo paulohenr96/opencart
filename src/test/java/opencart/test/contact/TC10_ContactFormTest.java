@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import opencart.pages.ContactPage;
 import opencart.test.base.BaseTest;
 
-public class ContactFormTest extends BaseTest{
+public class TC10_ContactFormTest extends BaseTest{
 	
 	
 	@Test

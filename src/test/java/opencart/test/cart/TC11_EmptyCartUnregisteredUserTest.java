@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import opencart.pages.CartPage;
 import opencart.test.base.BaseTest;
 
-public class EmptyCartUnregisteredUserTest extends BaseTest {
+public class TC11_EmptyCartUnregisteredUserTest extends BaseTest {
 
 	
 	@Test

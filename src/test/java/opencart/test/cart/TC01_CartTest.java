@@ -1,4 +1,4 @@
-package opencart.test.login;
+package opencart.test.cart;
 
 import static opencart.utility.GetUtility.getURL;
 import static opencart.utility.RandomUtility.generateAlphanumeric;
@@ -8,35 +8,32 @@ import static opencart.utility.WaitUtility.isURLLoaded;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import opencart.pages.LoginPage;
+import opencart.pages.ProductListPage;
 import opencart.pages.RegisterPage;
 import opencart.test.base.BaseTest;
 
-public class LoginTest extends BaseTest {
+//@Test(testName = "TC01_CartTest",description = "Test description")
+@Test
+public class TC01_CartTest extends BaseTest {
 
 	
 	
-	@Test
-	public void successfulLogin() throws InterruptedException {
-		logger.info("*** Starting LoginTest ***");
-
-		
-		logger.info("Going to register page...");
+	public void addToCart() throws InterruptedException {
+        logger.info("*** Start TC01_CartTest ***");
+        logger.info("Going to register page...");
 
 		homePage.clickMyAccount();
-		RegisterPage registerPage = homePage.goToRegisterPage();
-				
 		
-		logger.info("Generating fields...");
+		RegisterPage registerPage = homePage.goToRegisterPage();
+      
+		logger.info("Generating data...");
 
 		String firstName = generateString();
 		String lastName = generateString();
 		String email = generateString() + "@example.com"; 
 		String password = generateAlphanumeric();
 
-		
-		logger.info("Setting fields...");
-
+		logger.info("Setting the fields...");
 		registerPage.setFirstName(firstName);
 		registerPage.setLastName(lastName);
 		registerPage.setEmail(email);
@@ -45,36 +42,27 @@ public class LoginTest extends BaseTest {
 		registerPage.clickAgree();
 		registerPage.clickContinue();
 		
+			
+		logger.info("Checking the URL...");
 		String expectedFractionURL="route=account/success";
 		Boolean urlLoaded = isURLLoaded(expectedFractionURL);
 		Assert.assertTrue(urlLoaded,"Invalid URL ("+getURL()+")");
+		
 
-		
-		logger.info("Logging out...");
+		logger.info("Going to MacPage...");
+		homePage.clickDesktops();
+		ProductListPage productListPage = homePage.goToMacPage();
 
-		homePage.clickMyAccount();
-		homePage.clickLogout();
-		isURLLoaded("route=account/logout");
+		int indexOfProduct=1;
+		
 
+		productListPage.addProductToCartByIndex(indexOfProduct);
+		logger.info("Checking message...");
+		String expectedMessage="Success: You have added iMac to your shopping cart!";
+		String actualMessage=productListPage.getNotificationSuccess();
 		
-		logger.info("Going to login page...");
-		
-		homePage.clickMyAccount();
-		LoginPage loginPage = homePage.goToLoginPage();
-		
-		
-		logger.info("Setting fields...");
-
-		loginPage.setEmailAddress(email);
-		loginPage.setPassword(password);
-		
-		
-		logger.info("Clicking login...");
-		loginPage.clickLogin();
-		
-		String expectedFraction="route=account/account";
-		Boolean loadedUrl = isURLLoaded(expectedFraction);
-		Assert.assertTrue(loadedUrl,"Invalid URL ("+getURL()+")");
+		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");
+	
 		
 	}
 }

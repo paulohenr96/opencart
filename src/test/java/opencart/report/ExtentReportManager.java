@@ -48,10 +48,12 @@ public class ExtentReportManager implements ITestListener {
 
 
 	public void onTestSuccess(ITestResult result) {
-
-		test = extent.createTest(result.getName());
+		String[] arr = result.getInstanceName().split("\\.");
+		String nameOfTheTestClass=arr.length>0?arr[arr.length-1]:result.getInstanceName();
+		
+		test = extent.createTest(nameOfTheTestClass);
 		test.addScreenCaptureFromPath(captureScreen(result));
-
+		
 		test.log(Status.PASS, "Test case PASSED is:" + result.getName());
 
 	}
@@ -60,7 +62,7 @@ public class ExtentReportManager implements ITestListener {
 		test = extent.createTest(result.getName());
 		test.addScreenCaptureFromPath(captureScreen(result));
 		test.log(Status.FAIL, "Test case FAILED is: " + result.getName());
-		test.log(Status.FAIL, "Test case FAILED cause is:" + result.getThrowable());
+		test.log(Status.FAIL, "Test case FAILED cause is:" + result.getThrowable().getMessage());
 
 	}
 

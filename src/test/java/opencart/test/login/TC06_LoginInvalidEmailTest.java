@@ -8,26 +8,35 @@ import org.testng.annotations.Test;
 import opencart.pages.LoginPage;
 import opencart.test.base.BaseTest;
 
-public class LoginEmptyFieldsTest extends BaseTest {
+public class TC06_LoginInvalidEmailTest extends BaseTest {
 
 	
 	
 	@Test
-	public void emptyFieldsLogin() throws InterruptedException {
-		logger.info("*** Starting LoginEmptyFieldsTest ***");
+	public void invalidEmailTest() throws InterruptedException {
+		
+		logger.info("*** Starting TC06_LoginInvalidEmailTest *** ");
 
 		
 		logger.info("Going to login page...");
-
 		homePage.clickMyAccount();
 		LoginPage loginPage = homePage.goToLoginPage();
 		
 		
+		
+		logger.info("Setting fields...");
+		loginPage.setEmailAddress("paulo123gmail.com");
+		loginPage.setPassword("paulo123");
+		
+		logger.info("Click login button...");
+
 		loginPage.clickLogin();
 		String actualMessage=loginPage.getNotification();
 		String expectedMessage="Warning: No match for E-Mail Address and/or Password.";
 		Assert.assertEquals(actualMessage,expectedMessage,"Invalid message ('"+actualMessage+"')");
 		
+	
+	
 	
 	}
 }

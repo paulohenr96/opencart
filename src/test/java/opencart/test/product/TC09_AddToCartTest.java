@@ -11,12 +11,12 @@ import opencart.pages.MonitorsPage;
 import opencart.pages.ProductPage;
 import opencart.test.base.BaseTest;
 
-public class AddToCartTest extends BaseTest{
+public class TC09_AddToCartTest extends BaseTest{
 
 	
 	@Test
 	public void addProductToCartProductPageTest() throws InterruptedException, AWTException {
-		logger.info("*** Starting AddToCartTest ***");
+		logger.info("*** Starting TC09_AddToCartTest ***");
 
 		String pathFile=System.getProperty("user.dir")+"\\resources\\sample.txt";
 		String date="25082018";

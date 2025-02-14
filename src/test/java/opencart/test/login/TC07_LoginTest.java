@@ -1,4 +1,4 @@
-package opencart.test.wishlist;
+package opencart.test.login;
 
 import static opencart.utility.GetUtility.getURL;
 import static opencart.utility.RandomUtility.generateAlphanumeric;
@@ -9,28 +9,33 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import opencart.pages.LoginPage;
-import opencart.pages.ProductListPage;
 import opencart.pages.RegisterPage;
 import opencart.test.base.BaseTest;
 
-public class WishListTest extends BaseTest {
+public class TC07_LoginTest extends BaseTest {
 
+	
+	
 	@Test
-	public void addToWishList() throws InterruptedException {
-		logger.info("*** Starting WishListTest ***");
+	public void successfulLogin() throws InterruptedException {
+		logger.info("*** Starting TC07_LoginTest ***");
 
 		
 		logger.info("Going to register page...");
+
 		homePage.clickMyAccount();
 		RegisterPage registerPage = homePage.goToRegisterPage();
+				
+		
+		logger.info("Generating fields...");
 
-		
-		
-		logger.info("Setting fields...");
 		String firstName = generateString();
 		String lastName = generateString();
 		String email = generateString() + "@example.com"; 
 		String password = generateAlphanumeric();
+
+		
+		logger.info("Setting fields...");
 
 		registerPage.setFirstName(firstName);
 		registerPage.setLastName(lastName);
@@ -43,24 +48,33 @@ public class WishListTest extends BaseTest {
 		String expectedFractionURL="route=account/success";
 		Boolean urlLoaded = isURLLoaded(expectedFractionURL);
 		Assert.assertTrue(urlLoaded,"Invalid URL ("+getURL()+")");
-		
-		
-		logger.info("Going to macpage...");
-		homePage.clickDesktops();
-		ProductListPage productListPage = homePage.goToMacPage();
 
 		
-		logger.info("Adding to wishlist...");
-		int indexProduct=1;
-		productListPage.addProductToTheWishList(indexProduct);
+		logger.info("Logging out...");
+
+		homePage.clickMyAccount();
+		homePage.clickLogout();
+		isURLLoaded("route=account/logout");
+
 		
-		String expectedMessage="Success: You have added iMac to your wish list!";
-		String actualMessage=productListPage.getNotificationSuccess();
-		boolean successNotification = productListPage.successNotification();
+		logger.info("Going to login page...");
 		
-		Assert.assertTrue(successNotification,"The notification isnt visible.");
-		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");
-	
+		homePage.clickMyAccount();
+		LoginPage loginPage = homePage.goToLoginPage();
+		
+		
+		logger.info("Setting fields...");
+
+		loginPage.setEmailAddress(email);
+		loginPage.setPassword(password);
+		
+		
+		logger.info("Clicking login...");
+		loginPage.clickLogin();
+		
+		String expectedFraction="route=account/account";
+		Boolean loadedUrl = isURLLoaded(expectedFraction);
+		Assert.assertTrue(loadedUrl,"Invalid URL ("+getURL()+")");
 		
 	}
 }

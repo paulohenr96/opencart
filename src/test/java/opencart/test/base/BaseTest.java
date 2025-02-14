@@ -57,6 +57,8 @@ public class BaseTest {
 	
 	@BeforeMethod
 	public void loadApplication() {
+        logger.info("********* LOADING ENVIRONMENT... *********");
+
 		driver.get(OPENCART_URL);
 		
 		basePage=new BasePage();

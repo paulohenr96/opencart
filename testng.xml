@@ -6,47 +6,47 @@
 	</listeners>
 	<test name="LoginTest">
 		<classes>
-			<class name="opencart.test.login.LoginTest" />
-			<class name="opencart.test.login.LoginEmptyFieldsTest" />
-			<class name="opencart.test.login.LoginInvalidEmailTest" />
+			<class name="opencart.test.login.TC07_LoginTest" />
+			<class name="opencart.test.login.TC05_LoginEmptyFieldsTest" />
+			<class name="opencart.test.login.TC06_LoginInvalidEmailTest" />
 		</classes>
 	</test>
 	<test name="CartTest">
 		<classes>
-			<class name="opencart.test.cart.CartTest" />
-			<class name="opencart.test.cart.EmptyCartUnregisteredUserTest" />
+			<class name="opencart.test.cart.TC01_CartTest" />
+			<class name="opencart.test.cart.TC11_EmptyCartUnregisteredUserTest" />
 
 		</classes>
 	</test>
 	<test name="WishlistTest">
 		<classes>
-			<class name="opencart.test.wishlist.WishListTest" />
+			<class name="opencart.test.wishlist.TC12_WishListTest" />
 		</classes>
 	</test>
 	<test name="ContactForm">
 		<classes>
-			<class name="opencart.test.contact.ContactFormTest" />
+			<class name="opencart.test.contact.TC10_ContactFormTest" />
 		</classes>
 	</test>
 
 	<test name="Checkout">
 		<classes>
-			<class name="opencart.test.checkout.CheckoutTest" />
+			<class name="opencart.test.checkout.TC08_CheckoutTest" />
 		</classes>
 	</test>
 
 	<test name="Product">
 		<classes>
-			<class name="opencart.test.product.AddToCartTest" />
+			<class name="opencart.test.product.TC09_AddToCartTest" />
 		</classes>
 	</test>
 
 
 	<test name="Register">
 		<classes>
-			<class name="opencart.test.register.RegisterTest" />
+			<class name="opencart.test.register.TC03_RegisterTest" />
 			<class
-				name="opencart.test.register.RegisterDisagreePrivacyPolicyTest" />
+				name="opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest" />
 
 		</classes>
 	</test>
