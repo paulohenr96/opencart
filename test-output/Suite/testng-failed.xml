@@ -4,18 +4,28 @@
   <listeners>
     <listener class-name="opencart.report.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="Product(failed)">
+  <test thread-count="5" name="CartTest(failed)">
     <classes>
-      <class name="opencart.test.product.AddToCartTest">
+      <class name="opencart.test.cart.TC01_CartTest">
         <methods>
           <include name="flushSuite"/>
           <include name="loadApplication"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setSuite"/>
-          <include name="addProductToCartProductPageTest"/>
+          <include name="addToCart"/>
         </methods>
-      </class> <!-- opencart.test.product.AddToCartTest -->
+      </class> <!-- opencart.test.cart.TC01_CartTest -->
+      <class name="opencart.test.cart.TC11_EmptyCartUnregisteredUserTest">
+        <methods>
+          <include name="flushSuite"/>
+          <include name="loadApplication"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="setSuite"/>
+          <include name="emptyCartUnregisteredUserTest"/>
+        </methods>
+      </class> <!-- opencart.test.cart.TC11_EmptyCartUnregisteredUserTest -->
     </classes>
-  </test> <!-- Product(failed) -->
+  </test> <!-- CartTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

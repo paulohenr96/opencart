@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="opencart.test.product.AddToCartTest">
+      <class name="opencart.test.product.TC09_AddToCartTest">
         <methods>
           <include name="loadApplication"/>
           <include name="flushSuite"/>
@@ -12,7 +12,7 @@
           <include name="setSuite"/>
           <include name="addProductToCartProductPageTest"/>
         </methods>
-      </class> <!-- opencart.test.product.AddToCartTest -->
+      </class> <!-- opencart.test.product.TC09_AddToCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -20,7 +20,7 @@
 	</test>
 	<test name="WishlistTest">
 		<classes>
-			<class name="opencart.test.wishlist.TC12_WishListTest" />
+			<class name="opencart.test.wishlist.TC02_WishListTest" />
 		</classes>
 	</test>
 	<test name="ContactForm">
