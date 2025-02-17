@@ -1,16 +1,16 @@
 package opencart.report;
 
+import static opencart.utility.PropertiesUtil.getProperty;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
-import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
@@ -26,48 +26,61 @@ public class ExtentReportManager implements ITestListener {
 	public static ExtentSparkReporter  sparkReporter;
 	public static ExtentReports extent;
 	public ExtentTest test;
+	protected static Logger logger = Logger.getLogger(ExtentReportManager.class);
 
 	public static void createInstance() {
 		String fileName="report";
 
-		sparkReporter= new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/"+fileName+".html");
+		String pathFolder = System.getProperty("user.dir") + "/reports/";
+		sparkReporter= new ExtentSparkReporter(pathFolder+fileName+".html");
 		sparkReporter.config().setDocumentTitle("Automation Report");
 		sparkReporter.config().setReportName("Functional Testing");
 		sparkReporter.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
-		extent.setSystemInfo("Computer Name", "localhost");
-		extent.setSystemInfo("Environment", "QA");
-		extent.setSystemInfo("Tester Name", "Paulo Henrique");
-		extent.setSystemInfo("os", "Windows10");
-		extent.setSystemInfo("Browser name", "Chrome");
-		
+		extent.setSystemInfo("Computer Name", getProperty("host"));
+		extent.setSystemInfo("Environment", getProperty("execution_env"));
+		extent.setSystemInfo("Tester Name", getProperty("testername"));
+		extent.setSystemInfo("os", getProperty("os"));
+		extent.setSystemInfo("Browser name", getProperty("browser"));
+		logger.info("Report set");
 		
 	}
 	
 
 
 	public void onTestSuccess(ITestResult result) {
-		String[] arr = result.getInstanceName().split("\\.");
-		String nameOfTheTestClass=arr.length>0?arr[arr.length-1]:result.getInstanceName();
+		logger.info("Test Success");
+
 		
-		test = extent.createTest(nameOfTheTestClass);
+		test = extent.createTest(getTestName(result));
 		test.addScreenCaptureFromPath(captureScreen(result));
 		
 		test.log(Status.PASS, "Test case PASSED is:" + result.getName());
 
 	}
 
+	public String getTestName(ITestResult result) {
+		
+		String[] arr = result.getInstanceName().split("\\.");
+		String nameOfTheTestClass=arr.length>0?arr[arr.length-1]:result.getInstanceName();
+		
+		return nameOfTheTestClass;
+	}
 	public void onTestFailure(ITestResult result) {
-		test = extent.createTest(result.getName());
-		test.addScreenCaptureFromPath(captureScreen(result));
+		logger.info("Test Failure");
+		test = extent.createTest(getTestName(result));
+		String captureScreen = captureScreen(result);
+		test.addScreenCaptureFromPath(captureScreen);
 		test.log(Status.FAIL, "Test case FAILED is: " + result.getName());
 		test.log(Status.FAIL, "Test case FAILED cause is:" + result.getThrowable().getMessage());
 
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		test = extent.createTest(result.getName());
+		logger.info("Test Skipped");
+
+		test = extent.createTest(getTestName(result));
 		
 		test.log(Status.FAIL, "Test case SKIPPED is:" + result.getName());
 
@@ -79,11 +92,14 @@ public class ExtentReportManager implements ITestListener {
 
 	}
 	public String captureScreen(ITestResult result) {
-		
+		logger.info("Test Capture Screen");
+
 		TakesScreenshot screenshot=(TakesScreenshot) (BasePage.driver);
 		File source=screenshot.getScreenshotAs(OutputType.FILE);
-		File destination = new File(System.getProperty("user.dir")+
-						"/resources/screenshots/"+
+		String pathFolder=System.getProperty("user.dir")+
+				"/resources/screenshots/";
+//		String pathFolder="home/selenium/resources/screenshots/";
+		File destination = new File(pathFolder+
 						new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date())						
 						+result.getName()+".png");	
 		
