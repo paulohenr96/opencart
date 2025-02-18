@@ -12,6 +12,8 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
@@ -45,7 +47,6 @@ public class BaseTest {
 		logger.info("===============================================");
 
 		logger.info("*** Starting Suite ***");
-		
 
 	}
 
@@ -56,8 +57,8 @@ public class BaseTest {
 //		p.load(file);
 		OPENCART_URL = getProperty("appURL");
 
-		String os=getProperty("os");
-		String br=getProperty("browser");
+		String os = getProperty("os");
+		String br = getProperty("browser");
 
 		if (getProperty("execution_env").equalsIgnoreCase("remote")) {
 			DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -102,6 +103,24 @@ public class BaseTest {
 		} else {
 
 			driver = new ChromeDriver();
+
+			switch (br.toLowerCase()) {
+
+			case "chrome":
+				driver = new ChromeDriver();
+				break;
+			case "edge":
+				driver = new EdgeDriver();
+				break;
+			case "firefox":
+				driver = new FirefoxDriver();
+				break;
+
+			default:
+				System.out.println("No matching browser name...");
+				return;
+
+			}
 		}
 
 		driver.manage().window().maximize();
@@ -119,6 +138,7 @@ public class BaseTest {
 		Utility.setUtilityDriver();
 		homePage = new HomePage();
 	}
+
 	@AfterClass
 	public void tearDown() {
 		logger.info("Quitting driver...");
