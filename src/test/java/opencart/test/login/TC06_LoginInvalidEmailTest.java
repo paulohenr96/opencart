@@ -2,6 +2,7 @@ package opencart.test.login;
 
 import static opencart.utility.GetUtility.getURL;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,12 +11,13 @@ import opencart.test.base.BaseTest;
 
 public class TC06_LoginInvalidEmailTest extends BaseTest {
 
-	
+	private  Logger logger = Logger.getLogger(TC06_LoginInvalidEmailTest.class);
+
 	
 	@Test
 	public void invalidEmailTest() throws InterruptedException {
 		
-		logger.info("*** Starting TC06_LoginInvalidEmailTest *** ");
+		logger.info("*** Starting Test *** ");
 
 		
 		logger.info("Going to login page...");
@@ -36,7 +38,8 @@ public class TC06_LoginInvalidEmailTest extends BaseTest {
 		Assert.assertEquals(actualMessage,expectedMessage,"Invalid message ('"+actualMessage+"')");
 		
 	
-	
+		logger.info("*** Finished Test *** ");
+
 	
 	}
 }

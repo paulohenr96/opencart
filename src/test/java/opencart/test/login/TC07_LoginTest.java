@@ -5,6 +5,7 @@ import static opencart.utility.RandomUtility.generateAlphanumeric;
 import static opencart.utility.RandomUtility.generateString;
 import static opencart.utility.WaitUtility.isURLLoaded;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,10 +16,11 @@ import opencart.test.base.BaseTest;
 public class TC07_LoginTest extends BaseTest {
 
 	
-	
+	private  Logger logger = Logger.getLogger(TC07_LoginTest.class);
+
 	@Test
 	public void successfulLogin() throws InterruptedException {
-		logger.info("*** Starting TC07_LoginTest ***");
+		logger.info("*** Starting Test ***");
 
 		
 		logger.info("Going to register page...");
@@ -76,5 +78,8 @@ public class TC07_LoginTest extends BaseTest {
 		Boolean loadedUrl = isURLLoaded(expectedFraction);
 		Assert.assertTrue(loadedUrl,"Invalid URL ("+getURL()+")");
 		
+		
+		logger.info("*** Finished Test ***");
+
 	}
 }

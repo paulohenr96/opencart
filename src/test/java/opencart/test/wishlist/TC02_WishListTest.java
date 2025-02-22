@@ -5,6 +5,7 @@ import static opencart.utility.RandomUtility.generateAlphanumeric;
 import static opencart.utility.RandomUtility.generateString;
 import static opencart.utility.WaitUtility.isURLLoaded;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,12 +13,14 @@ import opencart.pages.LoginPage;
 import opencart.pages.ProductListPage;
 import opencart.pages.RegisterPage;
 import opencart.test.base.BaseTest;
+import opencart.test.product.TC09_AddToCartTest;
 
 public class TC02_WishListTest extends BaseTest {
+	private  Logger logger = Logger.getLogger(TC02_WishListTest.class);
 
 	@Test
 	public void addToWishList() throws InterruptedException {
-		logger.info("*** Starting WishListTest ***");
+		logger.info("*** Starting Test ***");
 
 		
 		logger.info("Going to register page...");
@@ -61,6 +64,7 @@ public class TC02_WishListTest extends BaseTest {
 		Assert.assertTrue(successNotification,"The notification isnt visible.");
 		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");
 	
-		
+		logger.info("*** Finished Test ***");
+
 	}
 }

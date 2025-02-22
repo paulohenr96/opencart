@@ -5,6 +5,7 @@ import static opencart.utility.RandomUtility.generateAlphanumeric;
 import static opencart.utility.RandomUtility.generateString;
 import static opencart.utility.WaitUtility.isURLLoaded;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,10 +17,11 @@ import opencart.test.base.BaseTest;
 @Test
 public class TC01_CartTest extends BaseTest {
 
-	
+	private Logger logger = Logger.getLogger(TC01_CartTest.class);
+
 	
 	public void addToCart() throws InterruptedException {
-        logger.info("*** Start TC01_CartTest ***");
+        logger.info("*** Start Test ***");
         logger.info("Going to register page...");
 
 		homePage.clickMyAccount();
@@ -62,7 +64,8 @@ public class TC01_CartTest extends BaseTest {
 		String actualMessage=productListPage.getNotificationSuccess();
 		
 		Assert.assertEquals(actualMessage,expectedMessage,"Incorrect message ('"+actualMessage+"')");
-	
+        logger.info("*** Finished Test ***");
+
 		
 	}
 }

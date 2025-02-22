@@ -1,109 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-14T17:00:03 BRT" name="Suite" finished-at="2025-02-14T17:00:48 BRT" duration-ms="45283">
+  <suite started-at="2025-02-22T15:24:40 BRT" name="Suite" finished-at="2025-02-22T15:27:24 BRT" duration-ms="164763">
     <groups>
     </groups>
-    <test started-at="2025-02-14T17:00:03 BRT" name="LoginTest" finished-at="2025-02-14T17:00:48 BRT" duration-ms="45283">
+    <test started-at="2025-02-22T15:24:40 BRT" name="LoginTest" finished-at="2025-02-22T15:25:21 BRT" duration-ms="41816">
       <class name="opencart.test.login.TC07_LoginTest">
-        <test-method is-config="true" signature="setSuite()[pri:0, instance:opencart.test.login.TC07_LoginTest@550ee7e5]" started-at="2025-02-14T17:00:02 BRT" name="setSuite" finished-at="2025-02-14T17:00:03 BRT" duration-ms="540" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setSuite -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:opencart.test.login.TC07_LoginTest@550ee7e5]" started-at="2025-02-14T17:00:03 BRT" name="setUp" finished-at="2025-02-14T17:00:10 BRT" duration-ms="6470" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.TC07_LoginTest@306f16f3]" started-at="2025-02-22T15:24:40 BRT" name="setUp" finished-at="2025-02-22T15:24:44 BRT" duration-ms="4126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.TC07_LoginTest@550ee7e5]" started-at="2025-02-14T17:00:10 BRT" name="loadApplication" finished-at="2025-02-14T17:00:15 BRT" duration-ms="5370" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.TC07_LoginTest@306f16f3]" started-at="2025-02-22T15:24:44 BRT" name="loadApplication" finished-at="2025-02-22T15:24:47 BRT" duration-ms="3445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="successfulLogin()[pri:0, instance:opencart.test.login.TC07_LoginTest@550ee7e5]" started-at="2025-02-14T17:00:15 BRT" name="successfulLogin" finished-at="2025-02-14T17:00:23 BRT" duration-ms="8387" status="PASS">
+        <test-method signature="successfulLogin()[pri:0, instance:opencart.test.login.TC07_LoginTest@306f16f3]" started-at="2025-02-22T15:24:47 BRT" name="successfulLogin" finished-at="2025-02-22T15:24:56 BRT" duration-ms="8931" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.TC07_LoginTest@550ee7e5]" started-at="2025-02-14T17:00:24 BRT" name="tearDown" finished-at="2025-02-14T17:00:24 BRT" duration-ms="652" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.TC07_LoginTest@306f16f3]" started-at="2025-02-22T15:24:57 BRT" name="tearDown" finished-at="2025-02-22T15:24:57 BRT" duration-ms="672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="flushSuite()[pri:0, instance:opencart.test.login.TC07_LoginTest@550ee7e5]" started-at="2025-02-14T17:00:48 BRT" name="flushSuite" finished-at="2025-02-14T17:00:49 BRT" duration-ms="788" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flushSuite -->
       </class> <!-- opencart.test.login.TC07_LoginTest -->
       <class name="opencart.test.login.TC05_LoginEmptyFieldsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@50ad3bc1]" started-at="2025-02-14T17:00:24 BRT" name="setUp" finished-at="2025-02-14T17:00:27 BRT" duration-ms="2726" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@15bbf42f]" started-at="2025-02-22T15:24:57 BRT" name="setUp" finished-at="2025-02-22T15:25:00 BRT" duration-ms="2366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@50ad3bc1]" started-at="2025-02-14T17:00:27 BRT" name="loadApplication" finished-at="2025-02-14T17:00:33 BRT" duration-ms="6463" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@15bbf42f]" started-at="2025-02-22T15:25:00 BRT" name="loadApplication" finished-at="2025-02-22T15:25:04 BRT" duration-ms="4188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="emptyFieldsLogin()[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@50ad3bc1]" started-at="2025-02-14T17:00:33 BRT" name="emptyFieldsLogin" finished-at="2025-02-14T17:00:36 BRT" duration-ms="2238" status="PASS">
+        <test-method signature="emptyFieldsLogin()[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@15bbf42f]" started-at="2025-02-22T15:25:04 BRT" name="emptyFieldsLogin" finished-at="2025-02-22T15:25:07 BRT" duration-ms="3707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyFieldsLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@50ad3bc1]" started-at="2025-02-14T17:00:36 BRT" name="tearDown" finished-at="2025-02-14T17:00:37 BRT" duration-ms="1112" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.TC05_LoginEmptyFieldsTest@15bbf42f]" started-at="2025-02-22T15:25:08 BRT" name="tearDown" finished-at="2025-02-22T15:25:09 BRT" duration-ms="1315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- opencart.test.login.TC05_LoginEmptyFieldsTest -->
       <class name="opencart.test.login.TC06_LoginInvalidEmailTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@223aa2f7]" started-at="2025-02-14T17:00:37 BRT" name="setUp" finished-at="2025-02-14T17:00:40 BRT" duration-ms="2922" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@550ee7e5]" started-at="2025-02-22T15:25:09 BRT" name="setUp" finished-at="2025-02-22T15:25:12 BRT" duration-ms="2869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@223aa2f7]" started-at="2025-02-14T17:00:40 BRT" name="loadApplication" finished-at="2025-02-14T17:00:45 BRT" duration-ms="5225" status="PASS">
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@550ee7e5]" started-at="2025-02-22T15:25:12 BRT" name="loadApplication" finished-at="2025-02-22T15:25:16 BRT" duration-ms="3872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadApplication -->
-        <test-method signature="invalidEmailTest()[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@223aa2f7]" started-at="2025-02-14T17:00:45 BRT" name="invalidEmailTest" finished-at="2025-02-14T17:00:47 BRT" duration-ms="2238" status="PASS">
+        <test-method signature="invalidEmailTest()[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@550ee7e5]" started-at="2025-02-22T15:25:16 BRT" name="invalidEmailTest" finished-at="2025-02-22T15:25:20 BRT" duration-ms="4647" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidEmailTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@223aa2f7]" started-at="2025-02-14T17:00:48 BRT" name="tearDown" finished-at="2025-02-14T17:00:48 BRT" duration-ms="786" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.login.TC06_LoginInvalidEmailTest@550ee7e5]" started-at="2025-02-22T15:25:21 BRT" name="tearDown" finished-at="2025-02-22T15:25:21 BRT" duration-ms="835" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- opencart.test.login.TC06_LoginInvalidEmailTest -->
     </test> <!-- LoginTest -->
+    <test started-at="2025-02-22T15:25:22 BRT" name="CartTest" finished-at="2025-02-22T15:25:43 BRT" duration-ms="21486">
+      <class name="opencart.test.cart.TC01_CartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.cart.TC01_CartTest@47faa49c]" started-at="2025-02-22T15:25:22 BRT" name="setUp" finished-at="2025-02-22T15:25:24 BRT" duration-ms="2667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.cart.TC01_CartTest@47faa49c]" started-at="2025-02-22T15:25:24 BRT" name="loadApplication" finished-at="2025-02-22T15:25:28 BRT" duration-ms="4000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="addToCart()[pri:0, instance:opencart.test.cart.TC01_CartTest@47faa49c]" started-at="2025-02-22T15:25:28 BRT" name="addToCart" finished-at="2025-02-22T15:25:34 BRT" duration-ms="5834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.cart.TC01_CartTest@47faa49c]" started-at="2025-02-22T15:25:34 BRT" name="tearDown" finished-at="2025-02-22T15:25:35 BRT" duration-ms="636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- opencart.test.cart.TC01_CartTest -->
+      <class name="opencart.test.cart.TC11_EmptyCartUnregisteredUserTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.cart.TC11_EmptyCartUnregisteredUserTest@28f2a10f]" started-at="2025-02-22T15:25:35 BRT" name="setUp" finished-at="2025-02-22T15:25:37 BRT" duration-ms="2254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.cart.TC11_EmptyCartUnregisteredUserTest@28f2a10f]" started-at="2025-02-22T15:25:37 BRT" name="loadApplication" finished-at="2025-02-22T15:25:40 BRT" duration-ms="3287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="emptyCartUnregisteredUserTest()[pri:0, instance:opencart.test.cart.TC11_EmptyCartUnregisteredUserTest@28f2a10f]" started-at="2025-02-22T15:25:40 BRT" name="emptyCartUnregisteredUserTest" finished-at="2025-02-22T15:25:42 BRT" duration-ms="1640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyCartUnregisteredUserTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.cart.TC11_EmptyCartUnregisteredUserTest@28f2a10f]" started-at="2025-02-22T15:25:42 BRT" name="tearDown" finished-at="2025-02-22T15:25:43 BRT" duration-ms="843" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- opencart.test.cart.TC11_EmptyCartUnregisteredUserTest -->
+    </test> <!-- CartTest -->
+    <test started-at="2025-02-22T15:25:43 BRT" name="WishlistTest" finished-at="2025-02-22T15:25:57 BRT" duration-ms="13904">
+      <class name="opencart.test.wishlist.TC02_WishListTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.wishlist.TC02_WishListTest@56cdfb3b]" started-at="2025-02-22T15:25:43 BRT" name="setUp" finished-at="2025-02-22T15:25:46 BRT" duration-ms="2533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.wishlist.TC02_WishListTest@56cdfb3b]" started-at="2025-02-22T15:25:46 BRT" name="loadApplication" finished-at="2025-02-22T15:25:50 BRT" duration-ms="4192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="addToWishList()[pri:0, instance:opencart.test.wishlist.TC02_WishListTest@56cdfb3b]" started-at="2025-02-22T15:25:50 BRT" name="addToWishList" finished-at="2025-02-22T15:25:56 BRT" duration-ms="6019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToWishList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.wishlist.TC02_WishListTest@56cdfb3b]" started-at="2025-02-22T15:25:56 BRT" name="tearDown" finished-at="2025-02-22T15:25:57 BRT" duration-ms="991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- opencart.test.wishlist.TC02_WishListTest -->
+    </test> <!-- WishlistTest -->
+    <test started-at="2025-02-22T15:25:57 BRT" name="ContactForm" finished-at="2025-02-22T15:26:08 BRT" duration-ms="11020">
+      <class name="opencart.test.contact.TC10_ContactFormTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.contact.TC10_ContactFormTest@7205765b]" started-at="2025-02-22T15:25:57 BRT" name="setUp" finished-at="2025-02-22T15:25:59 BRT" duration-ms="2451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.contact.TC10_ContactFormTest@7205765b]" started-at="2025-02-22T15:25:59 BRT" name="loadApplication" finished-at="2025-02-22T15:26:03 BRT" duration-ms="3965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="contactFormSuccessful()[pri:0, instance:opencart.test.contact.TC10_ContactFormTest@7205765b]" started-at="2025-02-22T15:26:03 BRT" name="contactFormSuccessful" finished-at="2025-02-22T15:26:07 BRT" duration-ms="3657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactFormSuccessful -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.contact.TC10_ContactFormTest@7205765b]" started-at="2025-02-22T15:26:07 BRT" name="tearDown" finished-at="2025-02-22T15:26:08 BRT" duration-ms="767" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- opencart.test.contact.TC10_ContactFormTest -->
+    </test> <!-- ContactForm -->
+    <test started-at="2025-02-22T15:26:08 BRT" name="Checkout" finished-at="2025-02-22T15:26:33 BRT" duration-ms="25161">
+      <class name="opencart.test.checkout.TC08_CheckoutTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.checkout.TC08_CheckoutTest@3f6b0be5]" started-at="2025-02-22T15:26:08 BRT" name="setUp" finished-at="2025-02-22T15:26:10 BRT" duration-ms="2212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.checkout.TC08_CheckoutTest@3f6b0be5]" started-at="2025-02-22T15:26:10 BRT" name="loadApplication" finished-at="2025-02-22T15:26:14 BRT" duration-ms="3452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="addToCart()[pri:0, instance:opencart.test.checkout.TC08_CheckoutTest@3f6b0be5]" started-at="2025-02-22T15:26:14 BRT" name="addToCart" finished-at="2025-02-22T15:26:32 BRT" duration-ms="18431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.checkout.TC08_CheckoutTest@3f6b0be5]" started-at="2025-02-22T15:26:32 BRT" name="tearDown" finished-at="2025-02-22T15:26:33 BRT" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- opencart.test.checkout.TC08_CheckoutTest -->
+    </test> <!-- Checkout -->
+    <test started-at="2025-02-22T15:26:33 BRT" name="Product" finished-at="2025-02-22T15:26:59 BRT" duration-ms="26072">
+      <class name="opencart.test.product.TC09_AddToCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.product.TC09_AddToCartTest@1a18644]" started-at="2025-02-22T15:26:33 BRT" name="setUp" finished-at="2025-02-22T15:26:36 BRT" duration-ms="2488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.product.TC09_AddToCartTest@1a18644]" started-at="2025-02-22T15:26:36 BRT" name="loadApplication" finished-at="2025-02-22T15:26:40 BRT" duration-ms="4522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="addProductToCartProductPageTest()[pri:0, instance:opencart.test.product.TC09_AddToCartTest@1a18644]" started-at="2025-02-22T15:26:40 BRT" name="addProductToCartProductPageTest" finished-at="2025-02-22T15:26:56 BRT" duration-ms="16160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductToCartProductPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.product.TC09_AddToCartTest@1a18644]" started-at="2025-02-22T15:26:57 BRT" name="tearDown" finished-at="2025-02-22T15:26:59 BRT" duration-ms="2698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- opencart.test.product.TC09_AddToCartTest -->
+    </test> <!-- Product -->
+    <test started-at="2025-02-22T15:26:59 BRT" name="Register" finished-at="2025-02-22T15:27:24 BRT" duration-ms="25160">
+      <class name="opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest@18d87d80]" started-at="2025-02-22T15:27:11 BRT" name="setUp" finished-at="2025-02-22T15:27:14 BRT" duration-ms="2489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest@18d87d80]" started-at="2025-02-22T15:27:14 BRT" name="loadApplication" finished-at="2025-02-22T15:27:19 BRT" duration-ms="5236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="disagreePrivacyPolicyRegister()[pri:0, instance:opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest@18d87d80]" started-at="2025-02-22T15:27:19 BRT" name="disagreePrivacyPolicyRegister" finished-at="2025-02-22T15:27:23 BRT" duration-ms="4122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disagreePrivacyPolicyRegister -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest@18d87d80]" started-at="2025-02-22T15:27:23 BRT" name="tearDown" finished-at="2025-02-22T15:27:24 BRT" duration-ms="1165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- opencart.test.register.TC04_RegisterDisagreePrivacyPolicyTest -->
+      <class name="opencart.test.register.TC03_RegisterTest">
+        <test-method is-config="true" signature="setSuite()[pri:0, instance:opencart.test.register.TC03_RegisterTest@1af2d44a]" started-at="2025-02-22T15:24:39 BRT" name="setSuite" finished-at="2025-02-22T15:24:40 BRT" duration-ms="747" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setSuite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:opencart.test.register.TC03_RegisterTest@1af2d44a]" started-at="2025-02-22T15:26:59 BRT" name="setUp" finished-at="2025-02-22T15:27:02 BRT" duration-ms="2525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="loadApplication()[pri:0, instance:opencart.test.register.TC03_RegisterTest@1af2d44a]" started-at="2025-02-22T15:27:02 BRT" name="loadApplication" finished-at="2025-02-22T15:27:05 BRT" duration-ms="3033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadApplication -->
+        <test-method signature="successfulRegister()[pri:0, instance:opencart.test.register.TC03_RegisterTest@1af2d44a]" started-at="2025-02-22T15:27:05 BRT" name="successfulRegister" finished-at="2025-02-22T15:27:10 BRT" duration-ms="5315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfulRegister -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:opencart.test.register.TC03_RegisterTest@1af2d44a]" started-at="2025-02-22T15:27:10 BRT" name="tearDown" finished-at="2025-02-22T15:27:11 BRT" duration-ms="894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flushSuite()[pri:0, instance:opencart.test.register.TC03_RegisterTest@1af2d44a]" started-at="2025-02-22T15:27:24 BRT" name="flushSuite" finished-at="2025-02-22T15:27:25 BRT" duration-ms="961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushSuite -->
+      </class> <!-- opencart.test.register.TC03_RegisterTest -->
+    </test> <!-- Register -->
   </suite> <!-- Suite -->
 </testng-results>

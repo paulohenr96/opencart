@@ -6,6 +6,7 @@ import static opencart.utility.RandomUtility.generateNumeric;
 import static opencart.utility.RandomUtility.generateString;
 import static opencart.utility.WaitUtility.isURLLoaded;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,10 +19,11 @@ import opencart.pages.alert.ShippingMethodAlertPage;
 import opencart.test.base.BaseTest;
 
 public class TC08_CheckoutTest extends BaseTest {
+	private  Logger logger = Logger.getLogger(TC08_CheckoutTest.class);
 
 	@Test
 	public void addToCart() throws InterruptedException {
-		logger.info("*** Start emptyCartUnregisteredUserTest ***");
+		logger.info("*** Start Test ***");
 		logger.info("Going to register page...");
 		
 		homePage.clickMyAccount();
@@ -107,6 +109,7 @@ public class TC08_CheckoutTest extends BaseTest {
 		checkoutPage.clickConfirmOrder();
 		Boolean loaded = isURLLoaded("route=checkout/success");
 		Assert.assertTrue(loaded, "Invalid URL (" + getURL() + ")");
+		logger.info("*** Finished Test ***");
 
 	}
 }

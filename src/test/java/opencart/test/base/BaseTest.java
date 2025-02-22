@@ -34,7 +34,7 @@ public class BaseTest {
 	protected HomePage homePage;
 	protected BasePage basePage;
 	private String OPENCART_URL;
-	protected static Logger logger = Logger.getLogger(BaseTest.class);
+	private  Logger logger = Logger.getLogger(BaseTest.class);
 
 	// Get the properties
 	private Properties p;
@@ -102,7 +102,6 @@ public class BaseTest {
 			}
 		} else {
 
-			driver = new ChromeDriver();
 
 			switch (br.toLowerCase()) {
 
@@ -144,7 +143,7 @@ public class BaseTest {
 		logger.info("Quitting driver...");
 
 		driver.quit();
-		logger.info("********* TEST ENDED *********");
+		logger.info("********* DRIVER QUIT *********");
 
 	}
 
