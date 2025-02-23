@@ -35,6 +35,37 @@ mvn test
 - Download [Jenkins](https://www.jenkins.io/download/)
 - Create a multibranch project and select the Jenkinsfile
 
+## Selenium Grid
+
+### Config Properties
+- Before running the docker-compose file you have to set the variables
+
+
+```
+appURL=http://host.docker.internal/opencart/upload (you need to make sure the opencart is running on this url locally)
+
+host=docker
+
+execution_env=remote
+
+os=linux
+
+```
+### Run Selenium Grid
+
+- The Docker Compose file has the images selenium-hub,selenium/chrome and selenium/mozilla
+- run the command on terminal
+
+```
+docker-compose up
+```
+
+### Run the tests
+- After running the docker-compose you are ready to run the tests using maven
+
+```
+mvn test
+```
 
 ## Test Cases
 | Test Case ID | Test Case Description                                               | Steps                                                                                       |
