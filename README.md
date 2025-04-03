@@ -1,83 +1,85 @@
-# Automated Testing OpenCart(v4.1.0.0) E-Commerce
+# 🛒 Automated Testing OpenCart (v4.1.0.0) E-Commerce
+
 <p align="center">
-  <img src="image.png" alt="alt text">
+  <img src="image.png" alt="OpenCart Testing">
 </p>
 
+## 🎯 Objective
+- Implement automated tests for the OpenCart E-Commerce platform.
+- The OpenCart application is tested locally (a demo is hosted [here](https://demo.opencart.com/)).
 
-## Objective
-- Automated tests for the OpenCart E-Commerce
-- The OpenCart application was run locally (the demo application is hosted [here](https://demo.opencart.com/))
+## 🚀 Technologies Used
+- **Eclipse** - IDE for Java development
+- **Java** - Programming language
+- **Maven** - Build and dependency management tool
+- **Selenium** - Web automation framework
+- **TestNG** - Testing framework for Java
 
-## Technologies
-- Eclipse
-- Java
-- Maven
-- Selenium
-- Test NG
+## 🛠️ Installing OpenCart
+To download and set up OpenCart locally, visit the official [download page](https://www.opencart.com/index.php?route=cms/download).
 
-## Installing OpenCart
-- To download the application and run it locally please access this [link](https://www.opencart.com/index.php?route=cms/download)
+## ▶️ Running the Project
 
-## Run the Project
+1. **Install Java**: Download and install [Java](https://www.oracle.com/br/java/technologies/downloads/#java21).
+2. **Install Maven**: Download and install [Maven](https://maven.apache.org/download.cgi).
+3. **Configure OpenCart URL**:
+   - Edit the `config.properties` file located at `src/test/resources`.
+   - Set the `appURL` variable with your OpenCart URL.
+4. **Run Tests**:
+   - Navigate to the project's root folder and execute:
+   ```sh
+   mvn test
+   ```
+5. **View Test Reports**:
+   - Test reports are generated inside the `reports` folder.
 
-- Download install [Java](https://www.oracle.com/br/java/technologies/downloads/#java21)
-- Download and install [Maven](https://maven.apache.org/download.cgi)
-- Configure the appURL variable in the config.properties file (src/test/resources) with the opencart URL
-- Go to the root folder and run the command on cmd
+## 🔧 Jenkins Integration
+1. Download and install [Jenkins](https://www.jenkins.io/download/).
+2. Create a **Multibranch Pipeline** project.
+3. Select the `Jenkinsfile` for test execution automation.
 
-```
-mvn test
-````
+## 🌐 Selenium Grid Setup
 
-- The reports are inside the folder reports
+### 🔑 Configuration Properties
+Before running the Selenium Grid setup, update the following variables:
 
-## Jenkins
-- Download [Jenkins](https://www.jenkins.io/download/)
-- Create a multibranch project and select the Jenkinsfile
-
-## Selenium Grid
-
-### Config Properties
-- Before running the docker-compose file you have to set the variables
-
-
-```
-appURL=http://host.docker.internal/opencart/upload (you need to make sure the opencart is running on this url locally)
-
+```properties
+appURL=http://host.docker.internal/opencart/upload  # Ensure OpenCart is running locally on this URL
 host=docker
-
 execution_env=remote
-
 os=linux
-
 ```
-### Run Selenium Grid
 
-- The Docker Compose file has the images selenium-hub,selenium/chrome and selenium/mozilla
-- run the command on terminal
+### ▶️ Running Selenium Grid
+The `docker-compose.yml` file includes images for `selenium-hub`, `selenium/chrome`, and `selenium/firefox`.
 
-```
+To start Selenium Grid, run:
+```sh
 docker-compose up
 ```
 
-### Run the tests
-- After running the docker-compose you are ready to run the tests using maven
-
-```
+### 📌 Running Tests on Selenium Grid
+Once Selenium Grid is running, execute the tests using Maven:
+```sh
 mvn test
 ```
 
-## Test Cases
-| Test Case ID | Test Case Description                                               | Steps                                                                                       |
-|--------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| TC01         | User adds a product to the cart in the product list                                    | 1. Create user<br>2. Add a product to the cart                                             |
-| TC02         | User adds a product to the wishlist                                | 1. Create user<br>2. Add a product to the wishlist                                         |
-| TC03         | User registers an account                                          | 1. Create user                                                                             |
-| TC04         | User tries to register without agreeing to the privacy policy     | 1. Create a user without clicking the privacy policy button                                |
-| TC05         | Login with empty fields                                            | 1. Attempt to login without filling in any fields                                          |
-| TC06         | Login with invalid email                                           | 1. Attempt to login with an invalid email                                                  |
-| TC07         | Successful login                                                   | 1. Register user<br>2. Logout<br>3. Login with the newly created user                      |
-| TC08         | Checkout process                                                   | 1. Create user<br>2. Add product to the cart<br>3. Go to the checkout page<br>4. Register the address for the new user<br>5. Select the address<br>6. Select the payment method<br>7. Confirm order |
-| TC09         | User adds a product to the cart in the product page                                                | 1. Go to the product page<br>2. Fill the form<br>3. Add to the cart |
-| TC10         | Fil the contact form                                                   | 1. Go to the contact page<br> 2.Fill the contact form |
-| TC11         | Unregistered user check the cart page                                                  | 1. Click in the cart icon<br>2. Go to the cart page<br> |
+## 🧪 Test Cases
+
+| Test Case ID | Description                                                    | Steps                                                                                   |
+|--------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| **TC01**     | Add product to cart from product list                         | 1. Create a user<br>2. Add a product to the cart                                       |
+| **TC02**     | Add product to wishlist                                       | 1. Create a user<br>2. Add a product to the wishlist                                   |
+| **TC03**     | Register a new account                                        | 1. Create a user                                                                       |
+| **TC04**     | Attempt registration without accepting privacy policy         | 1. Try creating an account without agreeing to the privacy policy                     |
+| **TC05**     | Attempt login with empty fields                               | 1. Try logging in without entering any credentials                                   |
+| **TC06**     | Attempt login with invalid email                              | 1. Enter an invalid email and attempt login                                          |
+| **TC07**     | Successful login                                              | 1. Register a user<br>2. Logout<br>3. Log in with the newly created user               |
+| **TC08**     | Complete checkout process                                     | 1. Register a user<br>2. Add a product to the cart<br>3. Proceed to checkout<br>4. Register an address<br>5. Select the address<br>6. Choose a payment method<br>7. Confirm the order |
+| **TC09**     | Add product to cart from product page                         | 1. Visit a product page<br>2. Fill out the required fields<br>3. Add product to cart  |
+| **TC10**     | Submit contact form                                           | 1. Go to the contact page<br>2. Fill out and submit the contact form                  |
+| **TC11**     | View cart as an unregistered user                             | 1. Click the cart icon<br>2. Navigate to the cart page                              |
+
+
+
+
